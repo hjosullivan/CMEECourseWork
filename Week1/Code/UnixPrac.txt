@@ -1,0 +1,85 @@
+# Author: Hannah O'Sullivan h.osullivan18@imperial.ac.uk
+# Script: UnixPrac.txt
+# Desc: fasta exercise for chapter one
+# Arguments: none
+# Date: Oct 2018
+
+#Make sure each command calls the data from the Data directory!
+
+#1. Count how many lines in each file3
+
+wc -l *.fasta
+
+28 407228326.fasta
+     127 407228412.fasta
+   78103 E.coli.fasta
+   78258 total
+
+
+#2. Print everything starting from the second line for the E.Coli genome
+
+tail -n +2 E.Coli.fasta
+
+
+
+#3. Count the sequence length of this genome
+
+tail -n +2 E.Coli.fasta | wc -m
+
+4764179
+
+#4. Count the matches of a particular sequence "ATGC" in the genome of E.Coli
+#(hint: Start by removing the first line and removing newline characters)
+#why remove first line?
+
+$head -n 1 E.Coli.fasta
+>E.Coli #o thats why.
+
+tail -n +2 "E.Coli.fasta" > "E.Coli.tmp" && mv "E.Coli.tmp" "E.Coli.fasta"
+#check
+
+#remove newline characters
+
+tr -d '\n'
+
+>usage: tr [-Ccsu] string1 string2
+>       tr [-Ccu] -d string1
+>       tr [-Ccu] -s string1
+>       tr [-Ccu] -ds string1 string2
+
+????
+
+#Match "ATGC" string
+
+grep -o "ATGC" E.Coli.fasta | wc -l
+#-o outputs matches wc counts them
+
+#5.Compute the AT/GC ratio
+#Divide AT by GC
+
+#remove head and newline characters again
+
+tail -n+2 E.coli.fasta
+tr -d '\n'
+
+#match "AT"
+grep -o "A,T"
+
+#count
+wc -l
+
+#match "GC"
+grep -o "GC"
+
+#count
+wc -l
+
+
+#Fun bash command yay
+find . -type f -exec ls -s {} \; | sort -n | head -10
+#find files in current directory (and sub directory)
+#sort numerically
+#show first 10 results
+
+
+#three sections (piped)
