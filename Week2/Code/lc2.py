@@ -16,14 +16,34 @@ rainfall = (('JAN',111.4),
 
 # (1) Use a list comprehension to create a list of month,rainfall tuples where
 # the amount of rain was greater than 100 mm.
- 
+raingreater100 = [i for i in rainfall if i[1] > 100]
+print(raingreater100)
+
 # (2) Use a list comprehension to create a list of just month names where the
-# amount of rain was less than 50 mm. 
+# amount of rain was less than 50 mm.
+rainless50 = [i for i in rainfall if i[1] < 50]
+print(rainless50)
 
-# (3) Now do (1) and (2) using conventional loops (you can choose to do 
-# this before 1 and 2 !). 
 
-# ANNOTATE WHAT EVERY BLOCK OR IF NECESSARY, LINE IS DOING! 
+# (3) Now do (1) and (2) using conventional loops (you can choose to do
+# this before 1 and 2 !).
 
-# ALSO, PLEASE INCLUDE A DOCSTRING AT THE BEGINNING OF THIS FILE THAT 
+#When rain was greater than 100mm
+raingreater100 = []
+for i in rainfall:
+    if i[1] > 100:
+        raingreater100.append(i)
+print(raingreater100)
+
+#When rain was less than 50mm
+rainless50 = []
+for i in rainfall:
+    if i[1] < 50:
+        rainless50.append(i)
+print(rainless50)
+
+
+# ANNOTATE WHAT EVERY BLOCK OR IF NECESSARY, LINE IS DOING!
+
+# ALSO, PLEASE INCLUDE A DOCSTRING AT THE BEGINNING OF THIS FILE THAT
 # SAYS WHAT THE SCRIPT DOES AND WHO THE AUTHOR IS
