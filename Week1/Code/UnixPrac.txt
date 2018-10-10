@@ -1,85 +1,37 @@
 # Author: Hannah O'Sullivan h.osullivan18@imperial.ac.uk
 # Script: UnixPrac.txt
 # Desc: fasta exercise for chapter one
-# Arguments: none
+# Arguments: --
 # Date: Oct 2018
 
 #Make sure each command calls the data from the Data directory!
+#cd ~/Documents/CMEECourseWork/Week1/Data/fasta/
 
 #1. Count how many lines in each file3
-
-wc -l *.fasta
-
-28 407228326.fasta
-     127 407228412.fasta
-   78103 E.coli.fasta
-   78258 total
+wc -l ../Data/fasta/*.fasta
 
 
 #2. Print everything starting from the second line for the E.Coli genome
-
 tail -n +2 E.Coli.fasta
 
 
-
 #3. Count the sequence length of this genome
-
 tail -n +2 E.Coli.fasta | wc -m
 
-4764179
 
 #4. Count the matches of a particular sequence "ATGC" in the genome of E.Coli
 #(hint: Start by removing the first line and removing newline characters)
-#why remove first line?
+tail -n+2 E.coli.fasta | tr -d "\n" | grep -o "ATGC" | wc -l
 
-$head -n 1 E.Coli.fasta
->E.Coli #o thats why.
 
-tail -n +2 "E.Coli.fasta" > "E.Coli.tmp" && mv "E.Coli.tmp" "E.Coli.fasta"
-#check
-
-#remove newline characters
-
-tr -d '\n'
-
->usage: tr [-Ccsu] string1 string2
->       tr [-Ccu] -d string1
->       tr [-Ccu] -s string1
->       tr [-Ccu] -ds string1 string2
-
-????
-
-#Match "ATGC" string
-
-grep -o "ATGC" E.Coli.fasta | wc -l
-#-o outputs matches wc counts them
 
 #5.Compute the AT/GC ratio
-#Divide AT by GC
+echo $(tail -n+2 E.coli.fasta | tr -d '\n'| grep -o [A,T] | wc -l)/$(tail -n+2 E.coli.fasta | tr -d '\n'| grep -o [G,C] | wc -l)
 
-#remove head and newline characters again
-
-tail -n+2 E.coli.fasta
-tr -d '\n'
-
-#match "AT"
-grep -o "A,T"
-
-#count
-wc -l
-
-#match "GC"
-grep -o "GC"
-
-#count
-wc -l
-
-
-#Fun bash command yay
+#Fun bash command yay!
 find . -type f -exec ls -s {} \; | sort -n | head -10
-#find files in current directory (and sub directory)
-#sort numerically
-#show first 10 results
 
-
-#three sections (piped)
+#The command consists of three sections (piped)
+#1. find files in current directory (and sub directory)
+#2. sort numerically
+#3. show first 10 results
