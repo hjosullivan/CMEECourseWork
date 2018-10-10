@@ -27,4 +27,9 @@ print(oaks_lc)
 oaks_loops = set()
 for species in taxa:
     if is_an_oak(species):
-        oaks_loops
+        oaks_loops.add(species.upper())
+print(oaks_loops)
+
+#get names in upper case using list comprehensions
+oaks_lc = set([species.upper() for species in taxa if is_an_oak(species)])
+print(oaks_lc)
