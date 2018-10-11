@@ -6,10 +6,19 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
         )
 
 # Birds is a tuple of tuples of length three: latin name, common name, mass.
-# write a (short) script to print these on a separate line or output block by species 
+# write a (short) script to print these on a separate line or output block by species
 # Hints: use the "print" command! You can use list comprehension!
+#print(birds)
 
-# ANNOTATE WHAT EVERY BLOCK OR IF NECESSARY, LINE IS DOING! 
+for i in birds:
+    print(i)
 
-# ALSO, PLEASE INCLUDE A DOCSTRING AT THE BEGINNING OF THIS FILE THAT 
+
+
+
+
+
+# ANNOTATE WHAT EVERY BLOCK OR IF NECESSARY, LINE IS DOING!
+
+# ALSO, PLEASE INCLUDE A DOCSTRING AT THE BEGINNING OF THIS FILE THAT
 # SAYS WHAT THE SCRIPT DOES AND WHO THE AUTHOR IS

@@ -25,7 +25,7 @@ taxa_dic = {} #create an empty dictionary
 for i in taxa: #for order
     if i[1] in taxa_dic.keys(): #make order a key
         taxa_dic[i[1]].append(i[0]) #and append species
-    else:
-        taxa_dic[i[1]] = [i[0]] #if it is not already a key, make new one and populate
+    else: #if it isn't a key...
+        taxa_dic[i[1]] = [i[0]] #make new one and populate!
 
 print(taxa_dic)
