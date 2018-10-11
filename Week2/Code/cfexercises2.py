@@ -2,9 +2,8 @@
 
 #an exponent
 def foo1(x):
+    """Solve x to the 0.5"""
     return x ** 0.5
-
-
 
 #returns the greatest value out of x and y
 def foo2(x,y):
@@ -23,7 +22,6 @@ def foo3(x, y, z):
         z = y
         y = tmp
     return [x, y, z]
-
 
 def foo4(x):
     result = 1
