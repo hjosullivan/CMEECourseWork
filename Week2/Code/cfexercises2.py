@@ -39,7 +39,7 @@ def foo_3(x, y, z):
 
 # ???
 def foo_4(x):
-    """ I have no idea what this does """
+    """ Calculates factorials iteratively """
     result = 1
     for i in range(1, x + 1):
         result = result * i
