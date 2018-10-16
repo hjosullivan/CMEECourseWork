@@ -6,7 +6,7 @@ A script to align ANY two DNA sequences from seperate files.
 Pickles the highest scoring alignment in addition to other equally
 good alignments.
 
-Output: align_seqs_pickle
+Output: align_seqs_pickle.p
 
 """
 
@@ -101,7 +101,7 @@ print("The highest score was {}".format(val))
 print("There were {} alignments with this score".format(len(my_best_score[val])))
 
 bests = {val : my_best_score[val]}
-pickle_bests = open("../Results/align_seqs_pickle", "wb")
+pickle_bests = open("../Results/align_seqs_pickle.p", "wb")
 pickle.dump(bests,pickle_bests)
 pickle_bests.close()
 
