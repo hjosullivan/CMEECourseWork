@@ -1,6 +1,15 @@
 #!/usr/bin/env python3
 
-"""Missing oaks problem: exemplyfying the use of debugging"""
+"""
+
+Missing oaks problem: a fun foray in debugging!
+
+This script excludes the header row in its seach for oaks
+and write a new file containing the names of just oaks.
+
+Output: JustOaksData.csv
+
+"""
 
 __author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
 __appname__ = "Oaks Debug me"
@@ -23,7 +32,7 @@ import doctest #import the doctest module
 
 #Define function
 def is_an_oak(name):
-    """ Returns True if name is starts with 'quercus'.
+    """ Returns True if name starts with 'quercus'.
 
     >>> is_an_oak('Fagus sylvatica')
     False
@@ -37,28 +46,22 @@ def is_an_oak(name):
     >> is_an_oak('Robur quercus')
     False
 
-    >>> is_an_oak(' Quercus robur')
-    True
-
     """
-    return name.lower().startswith('quercus')
+    return name.lower().split(' ')[0] == 'quercus'
 
 def main(argv):
-    f = open('../data/TestOaksData.csv','r') #open oaks csv
-    g = open('../data/JustOaksData.csv','w') #write oaks csv with just oaks
+    """ Find oaks and create a new csv file with just oaks"""
+    f = open('../Data/TestOaksData.csv','r') #open oaks csv
+    g = open('../Results/JustOaksData.csv','w') #write oaks csv with just oaks
     taxa = csv.reader(f) #import as taxa
-    csvwrite = csv.writer(g) #export
-    oaks = set() #create an expty set
-    for row in taxa: #for each row in taxa
-        print(row) #print that row
-        print ("The genus is: ") #also print this bit
-        print(row[0] + '\n') #plus new line
-        if is_an_oak(row[0]): #if an oak is found
-            print('FOUND AN OAK!\n') #also print FOUND AN OAK!
-            csvwrite.writerow([row[0], row[1]]) #export
 
+    filelines = [i for i in taxa]
 
-    return 0
+    oaks_str = "\n".join(["".join(i) for i in filelines[1:] if is_an_oak(i[0])])
+    header_str = " ".join(["".join(i.strip()) for i in filelines[0]])
+    print("The following are oaks:\n{}".format(oaks_str))
+    g.write("{}\n{}".format(header_str, oaks_str))
+    g.close()
 
 if (__name__ == "__main__"):
     status = main(sys.argv)
