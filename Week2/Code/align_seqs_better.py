@@ -6,7 +6,7 @@ A script to align ANY two DNA sequences from seperate files.
 Pickles the highest scoring alignment in addition to other equally
 good alignments.
 
-output: align_seqs_pickle 
+Output: align_seqs_pickle
 
 """
 
