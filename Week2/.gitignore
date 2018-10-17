@@ -1,0 +1,7 @@
+*~
+*.tmp
+*.pdf
+*.pyc
+.DS_Store
+.Rhistory
+_pycache_
