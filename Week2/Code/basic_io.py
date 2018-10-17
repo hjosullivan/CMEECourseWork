@@ -1,11 +1,24 @@
+#!/usr/bin/env python3
+
+"""
+
+A basic script to demonstrate input/output in python.
+
+"""
+
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "basic_io"
+__version__ = "0.0.1"
+__license__ = "I do not have one"
+
 ################
 ## FILE INPUT ##
 ################
 
-# Open a file for reading
+#Open a file for reading
 f = open('../Sandbox/test.txt', 'r') # r indicates read
-# Use "implicit" for loop:
-# if the object is a file, python will cycle over the lines
+#Use "implicit" for loop:
+#if the object is a file, python will cycle over the lines
 
 for line in f:
     print(line)
@@ -13,7 +26,7 @@ for line in f:
 # Close the file
 f.close()
 
-# Same example, skip blank lines
+#Same example, skip blank lines
 f = open('../Sandbox/test.txt', 'r')
 for line in f:
     if len(line.strip()) > 0:
@@ -53,5 +66,3 @@ another_dictionary = pickle.load(f)
 f.close()
 
 print(another_dictionary)
-
-```
