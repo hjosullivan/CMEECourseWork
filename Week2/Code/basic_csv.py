@@ -1,3 +1,17 @@
+#!/usr/bin/env python3
+
+"""
+
+An exercise in manipulating csv files with the csv
+package.
+
+"""
+
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "basic_csv"
+__version__ = "0.0.1"
+__license__ = "I do not have one"
+
 import csv
 
 # Read a file containing:
@@ -16,7 +30,7 @@ f.close()
 
 # Write a file containing only species name and body mass
 f = open('../Data/testcsv.csv', 'r')
-g = open('../Data/bodymass.csv', 'w')
+g = open('../Results/bodymass.csv', 'w')
 
 csvread = csv.reader(f)
 csvwrite = csv.writer(g)
