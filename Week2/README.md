@@ -40,7 +40,7 @@ CMEE coursework for week two: Biological Computing in Python I.
 * align_seqs.py
     * Aligns DNA sequences using one input txt file.
 * align_seqs_fasta.py
-    Aligns DNA sequences using any two input fasta files.
+    * Aligns DNA sequences using any two input fasta files.
 * align_seqs_better.py
     * Aligns DNA sequences and pickles the highest scoring alingnment
         in addition to equally good scores.
