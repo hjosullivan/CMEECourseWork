@@ -16,7 +16,7 @@ def main(argv):
     """ Main entry point of the program """
     print('This is a boilerplate')
     #note indented using two tabs or 4 spaces
-    return 0 #for interpretting success/failure 
+    return 0 #for interpretting success/failure
 
 if __name__ == "__main__":
     """ Makes sure the "main" function is called
