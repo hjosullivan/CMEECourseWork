@@ -1,3 +1,18 @@
+#!/usr/bin/env python3
+
+"""
+
+A script to compare the use of list comprehensions
+and for loops
+
+"""
+
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "Oaks"
+__version__ = "0.0.1"
+__license__ = "I do not have one"
+
+
 ## Finds just those taxa that are oak trees from a list of species
 
 taxa = [ 'Quercus robur',
