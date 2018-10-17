@@ -1,4 +1,16 @@
-#REMEMBER DOCSTRINGS ETC
+#!/usr/bin/env python3
+
+"""
+
+An exercise comparing the use of loops and
+list comprehensions (part one).
+
+"""
+
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "List Comprehension 1"
+__version__ = "0.0.1"
+__license__ = "I do not have one"
 
 
 
@@ -28,27 +40,7 @@ print(bm)
 # (2) Now do the same using conventional loops (you can shoose to do this
 # before 1 !).
 
-#Loop for listing latin names
-latin_names = set() #create empty set
-for i in birds: #for each set in birds
-    ln = i[0] #ln = first item in the set
-    latin_names.add(ln) #add ln to the empty set
-print(latin_names) #print
-
-#Loop for listing common names
-common_names = set()
-for i in birds:
-    cn = i[1]
-    common_names.add(cn)
-print(common_names)
-
-#Loop for listing body mass
-body_mass = set()
-for i in birds:
-    bm = i[2]
-    body_mass.add(bm)
-print(body_mass)
-
+#combine into one super loop
 latin_names = set()
 common_names = set()
 body_mass = set()
