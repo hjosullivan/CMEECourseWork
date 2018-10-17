@@ -1,3 +1,17 @@
+#!/usr/bin/env python3
+
+"""
+
+An exercise comparing the use of loops and
+list comprehensions (part two).
+
+"""
+
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "List Comprehension 2"
+__version__ = "0.0.1"
+__license__ = "I do not have one"
+
 # Average UK Rainfall (mm) for 1910 by month
 # http://www.metoffice.gov.uk/climate/uk/datasets
 rainfall = (('JAN',111.4),
