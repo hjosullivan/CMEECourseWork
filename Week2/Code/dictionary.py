@@ -1,3 +1,18 @@
+#!/usr/bin/env python3
+
+"""
+
+A script to populate a dictionary so that it maps
+order names to sets of taxa.
+
+"""
+
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "Dictionary"
+__version__ = "0.0.1"
+__license__ = "I do not have one"
+
+
 taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Gerbillus henleyi','Rodentia',),
          ('Peromyscus crinitus', 'Rodentia'),
