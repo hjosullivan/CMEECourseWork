@@ -37,7 +37,7 @@ def foo_3(x, y, z):
         y = tmp
     return [x, y, z]
 
-# ???
+#calculates factorials iteratively
 def foo_4(x):
     """ Calculates factorials iteratively """
     result = 1
