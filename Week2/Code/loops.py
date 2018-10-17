@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+
+"""
+
+A script to introduce writing for loops in python.
+
+"""
+
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "loops"
+__version__ = "0.0.1"
+__license__ = "I do not have one"
+
 #FOR loops in Python
 
 for i in range (5):
