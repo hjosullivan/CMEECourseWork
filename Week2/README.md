@@ -18,15 +18,15 @@ CMEE coursework for week two: Biological Computing in Python I.
 * scope.py
     * Usage of global and local variables.
 * control_flow.py
-    * An example in control flows
+    * An example in control flows.
 * cfexercises1.py
-    * Control flow exercise 1
+    * Control flow exercise 1.
 * loops.py
-    * Introduction to loops
+    * Introduction to loops.
 * oaks.py
-    * A comparison of loops and list comprehensions
+    * A comparison of loops and list comprehensions.
 * debugme.py
-    * A script to run using the python debugger
+    * A script to run using the python debugger.
 
 ### Practicals
 * cfexercises2.py
