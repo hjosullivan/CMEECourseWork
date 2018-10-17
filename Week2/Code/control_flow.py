@@ -9,7 +9,7 @@ of control statements"""
 __author__ = 'Hannah O Sullivan (h.osullivan18@imperial.ac.uk)'
 __appname__ = 'Control flow'
 __version__ = '0.0.1'
-__license__ = "License for this code/program"
+__license__ = "I do not have one"
 
 #import sys
 import sys
