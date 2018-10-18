@@ -1,3 +1,7 @@
+##################
+## Tree Heights ##
+##################
+
 #This function calculates heights of tree given the distance of each tree,
 #form its base and angle to its top
 #uses the trigonometric formula
@@ -13,12 +17,12 @@
 
 #clear environment
 rm(list = ls())
-#require(dplyr)
+require(dplyr)
 
 #if dplyr is not installed, install it
-if("dplyr" %in% rownames(installed.packages()) == FALSE){
-  install.packages("dplyr")
-}
+#if("dplyr" %in% rownames(installed.packages()) == FALSE){
+#  install.packages("dplyr")
+#}
 
 #import tree csv - use relative path!
 trees <- read.csv("../Data/trees.csv", header = TRUE)
