@@ -2,6 +2,11 @@
 ## Breaking out of loops ##
 ###########################
 
+## Author: Hannah O'Sullivan h.osullivan18@imperial.ac.uk
+## Script: break.R
+## Desc: Breaking out of loops
+## Date: October 2018
+
 #sometimes it is useful to break out of a loop when some condition is met.
 #use break in situations when you cannot set a target number of iterations.
 
