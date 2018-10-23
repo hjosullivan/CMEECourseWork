@@ -2,6 +2,11 @@
 ## Some code exemplifying control flow constructs in R ##
 #########################################################
 
+## Author: Hannah O'Sullivan h.osullivan18@imperial.ac.uk
+## Script: control.R
+## Desc: Introduction to writing R functions
+## Date: October 2018
+
 #clear environemnt
 rm(list = ls())
 
@@ -16,7 +21,7 @@ if (a == TRUE) {
 #on a single line
 z <- runif(1) #a random number
 if (z <= 0.5) {
-  print("Les than a quarter")
+  print("Less than a half")
 }
 
 #for loop using a sequence
