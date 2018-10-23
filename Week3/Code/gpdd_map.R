@@ -3,6 +3,8 @@
 #####################################################
 
 ## Author: Hannah O'Sullivan
+## Script: gpdd_map.R
+## Desc: Map of the GPDD
 ## Date: October 2018
 
 #clear environment
