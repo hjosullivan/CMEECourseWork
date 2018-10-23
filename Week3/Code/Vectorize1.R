@@ -7,6 +7,7 @@
 ## Desc: An exercise in vectorization
 ## Date: October 2018
 
+#clear environment
 rm(list = ls())
 
 M <- matrix(runif(1000000),1000,1000)
