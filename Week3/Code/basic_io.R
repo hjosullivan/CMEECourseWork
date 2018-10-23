@@ -1,4 +1,12 @@
-#A simple script to illustrate R input and output.
+#################################
+## Basic input and output in R ##
+#################################
+
+## Author: Hannah O'Sullivan h.osullivan18@imperial.ac.uk
+## Script: basic_io.R
+## Desc: A simple script to illustrate R input and output.
+## Date: October 2018
+
 #Run line by line and check inputs and outputs to understand what is happening
 
 #clean environment
