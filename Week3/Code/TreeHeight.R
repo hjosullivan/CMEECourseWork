@@ -1,6 +1,10 @@
 ##################
 ## Tree Heights ##
 ##################
+## Author: Hannah O'Sullivan h.osullivan18@imperial.ac.uk
+## Script: TreeHeight.R
+## Desc: Function to calculate tree heights
+## Date: October 2018
 
 #This function calculates heights of tree given the distance of each tree,
 #form its base and angle to its top
