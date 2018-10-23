@@ -2,6 +2,11 @@
 ## A boilerplate script ##
 ##########################
 
+## Author: Hannah O'Sullivan h.osullivan18@imperial.ac.uk
+## Script: boilerplate.R
+## Desc: Introduction to writing R functions
+## Date: October 2018
+
 #clean environment
 rm(list = ls())
 
