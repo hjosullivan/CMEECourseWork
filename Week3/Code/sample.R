@@ -2,6 +2,12 @@
 ## sample script ##
 ###################
 
+## Author: Hannah O'Sullivan h.osullivan18@imperial.ac.uk
+## Script: sample.R
+## Desc: A sampling example
+## Date: October 2018
+
+
 ## run a simulation that involves sampling from a population
 
 #clean environment
