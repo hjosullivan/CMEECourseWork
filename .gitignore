@@ -1,6 +1,5 @@
 *~
 *.tmp
-*.pdf
 *.pyc
 .DS_Store
 .Rhistory
