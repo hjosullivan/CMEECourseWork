@@ -38,6 +38,8 @@ MyData <- janitor::clean_names(MyData)
 #contains = a supercool wrapper to search for just the columns containing certain strings, here '_'
 MyData <- gather(MyData, key = species, value = 'count', contains('_'))
 
+write.csv(MyData,"../Results/DataWrangTidy.csv")
+
 
 
 
