@@ -43,6 +43,8 @@ CMEE coursework for week three: Biological Computing in R.
     * Autocorrelation in weather.
 * TAutoCorrLaTeX.tex
     * tex file to report TAutoCorr.R.
+* CompileLaTeX.sh
+    * A shell script to compile latex documents without bibtex.
 * gpdd_maps.R
     * Mapping the Global Population Dynamics Database (GPDD).
 
