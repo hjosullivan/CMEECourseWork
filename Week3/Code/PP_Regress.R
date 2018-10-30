@@ -1,6 +1,6 @@
-##############################
-## Predator-Prey regression ##
-##############################
+##########################################################
+## Predator-Prey regression by feeding interaction type ##
+##########################################################
 
 ## Author: Hannah O'Sullivan h.osullivan18@imperial.ac.uk
 ## Script: PP_Regress.R
