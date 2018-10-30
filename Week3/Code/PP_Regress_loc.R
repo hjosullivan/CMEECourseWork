@@ -1,6 +1,6 @@
-##############################
-## Predator-Prey regression ##
-##############################
+##########################################
+## Predator-Prey regression by location ##
+##########################################
 
 ## Author: Hannah O'Sullivan h.osullivan18@imperial.ac.uk
 ## Script: PP_Regress_loc.R
