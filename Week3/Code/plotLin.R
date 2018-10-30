@@ -7,6 +7,9 @@
 #clear environment
 rm(list = ls())
 
+#require packages
+require(ggplot2)
+
 #first create linear regression data
 x <- seq(0, 100, by = 0.1)
 y <- -4. + 0.25 * x +
