@@ -29,6 +29,12 @@ CMEE coursework for week three: Biological Computing in R.
     * Using ``try`` to "catch" bugs.
 * browse.R
     * Using ``browse()`` for debugging.
+* Girko.R
+    * Simulation of Girko's law.
+* MyBars.R
+    * An exercise in annotating a plot.
+* PlotLin.R
+    * An exercise in mathematical annotation on an axis.
 
 ### Practicals
 * TreeHeight.R
@@ -47,6 +53,16 @@ CMEE coursework for week three: Biological Computing in R.
     * A shell script to compile latex documents without bibtex.
 * gpdd_maps.R
     * Mapping the Global Population Dynamics Database (GPDD).
+* PP_Lattice.R
+    * Visualization of predator-prey interactions with lattice
+* PP_Regress.R
+    * Visualization of predator-prey interactions with ggplot2.
+* PP_Regress_loc.R
+    * Visualization of predator-prey interactions with ggplot2. 
+
+
+
+
 
 ## Authors
 
