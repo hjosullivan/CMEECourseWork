@@ -9,3 +9,7 @@
 echo "Running get_TreeHeight.R"
 Rscript get_TreeHeight.R ../Data/trees.csv
 echo "Done!"
+
+echo "Running get_TreeHeigh.py"
+python get_TreeHeight.py ../Data/trees.csv
+echo"Done!""
