@@ -12,6 +12,7 @@ def main(argv=[]):
     __author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
     __appname__ = "Lokta - Volterra 1"
     __version__ = "0.0.1"
+    __date__ = "November 2018"
     __license__ = "I do not have one"
 
     #import packages
@@ -26,10 +27,10 @@ def main(argv=[]):
         of consumer and resource population  at
         any given time step."""
 
-        R = pops[0] #assign R first column (list)
-        C = pops[1] #assign C to second column (list)
+        R = pops[0] #assign prey first column (list)
+        C = pops[1] #assign predator to second column (list)
         dRdt = r * R - a * R * C
-        dCdt = -z * C + r * a * R * C
+        dCdt = -z * C + e * a * R * C
 
         return sc.array([dRdt, dCdt])
 
