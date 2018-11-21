@@ -6,6 +6,12 @@ Quick profiling with timeit
 
 """
 
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "Profileme2"
+__version__ = "0.0.1"
+__date__ = "November 2018"
+__license__ = "I do not have one"
+
 #Loops vs. list comprehensions
 
 iters = 1000000
