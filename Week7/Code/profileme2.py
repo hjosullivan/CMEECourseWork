@@ -7,6 +7,12 @@ compute profileme.py
 
 """
 
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "Profileme2"
+__version__ = "0.0.1"
+__date__ = "November 2018"
+__license__ = "I do not have one"
+
 def my_squares(iters):
     """ Squares the values in a list """
     out = [i ** 2 for i in range(iters)] #replace loop with lc

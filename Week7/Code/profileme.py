@@ -7,6 +7,12 @@ alongside profileme2.py
 
 """
 
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "Profileme"
+__version__ = "0.0.1"
+__date__ = "November 2018"
+__license__ = "I do not have one"
+
 def my_squares(iters):
     """ Squares the values in a list"""
     out = [] #list
