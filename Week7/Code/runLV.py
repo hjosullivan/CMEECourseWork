@@ -1,3 +1,15 @@
+#!/usr/bin/env python3
+"""
+
+Profiling Lokta-Volterra python scripts
+
+"""
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "runLV"
+__version__ = "0.0.1"
+__license__ = "I do not have one"
+
+#import modules
 import cProfile
 import pstats
 from io import StringIO
