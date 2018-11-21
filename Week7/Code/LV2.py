@@ -3,16 +3,17 @@ def main(argv=[]):
 
     """
 
-    A python script to exemplify using numerical integration
-    to solve the Lokta-Volterra model for a predator-prey
-    system in two-dimmensional space.
+    A Lokta-Volterra model which includes prey density
+    dependance and takes input values from the command
+    line.
 
     Input: r = Intrinsic growth rate
            a = Per-capita search rate
            z = Mortality rate
            e = Consumer efficiency
-    Can also take input from the command line
-    e.g run LV2.py r a z e
+
+    Command line example:
+    run LV2.py r a z e
 
     Output: Figure of consumer-resource population dynamics
     Saves output to Results
@@ -31,7 +32,7 @@ def main(argv=[]):
 
     #define function to return growth rate of consumer
     #and resource population at any given time steps.
-    def dCR_dt(pops, t = 0, K = 250):
+    def dCR_dt(pops, t = 0):
         """ A function that returns growth rate
         of consumer and resource population at
         any given time step, including prey density
@@ -49,10 +50,10 @@ def main(argv=[]):
 
     #using system arugments
     try:
-        r = float(sys.argv[1])
-        a = float(sys.argv[2])
-        z = float(sys.argv[3])
-        e = float(sys.argv[4])
+        r = float(argv[1])
+        a = float(argv[2])
+        z = float(argv[3])
+        e = float(argv[4])
     except (ValueError, IndexError):
         print("Something wrong with values given, using default instead!")
         r = 1.
@@ -61,14 +62,13 @@ def main(argv=[]):
         e = 0.75
         print("Calculating Lokta-Volterra model")
 
-
-
-
-
     #define time vector
     #from time point 0 to 15
     #using 1000 sub-divisions of time
     t = sc.linspace(0, 15, 1000) #again values are arbitrary
+
+    #prey carrying capacity
+    K = 250
 
     #set initial conditions for both populations
     #10 resources and 5 consumers per unit area
@@ -104,8 +104,7 @@ def main(argv=[]):
     p.legend(loc = "best")
     p.xlabel("Time")
     p.ylabel("Population density")
-    p.title("Consumer-Resource population dynamics")
-
+    p.title("Consumer-Resource population dynamics, r = {:.2}, a = {:.2}, z = {:.2}, e = {:.2}".format(r,a,z,e), fontsize  = 10)
     #save to pdf in results directory
     f1.savefig("../Results/LV2_model.pdf")
 
