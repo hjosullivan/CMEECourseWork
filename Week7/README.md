@@ -14,15 +14,11 @@ CMEE coursework for week seven: Python II.
 * timeitme.py
     * Using `timeit` to time functions.
 * regex.py
-    * Regular expression exercise. 
+    * Regular expression exercise.
 
 ### Practicals
 * LV2.py
     * Lokta-Volterra script taking arguments from the command line. Includes prey density dependence.
-* LV3.py
-    * A discrete-time version of the Lokta-Volterra model.
-* LV4.py
-    * Discrete time Lokta-Volterra model with a random gaussian fluctuation in resource growth rate.
 * DrawFW.py
     * A food web network example using `networkx`.
 * blackbirds.py
