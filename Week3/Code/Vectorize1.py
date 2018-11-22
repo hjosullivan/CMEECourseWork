@@ -14,9 +14,8 @@ __license__ = "I do not have one"
 #import modules
 import numpy as np
 
-#create matrix
+#draw samples from a uniform distribution
 M = np.array(np.random.uniform((1000000), 1000, 1000))
-print(M)
 
 def SumAllElements(M):
     Dimensions = np.shape(M)
