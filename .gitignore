@@ -3,4 +3,4 @@
 *.pyc
 .DS_Store
 .Rhistory
-/Week5/
+_pycache_
