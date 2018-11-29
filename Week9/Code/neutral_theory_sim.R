@@ -3,7 +3,7 @@
 ##########################################
 
 # Author: Hannah O'Sullivan
-# Script: hjo17.R
+# Script: neutral_theory_sim.R
 # Date: November 18
 # Version: 0.1
 
@@ -359,7 +359,8 @@ question_16 <- function(){
   }
     
   x <- (x/101)
-  bin_names <- unlist(lapply(seq(1:max(bin_size)), function(n) paste(2^(n-1), "-", 2^n -1)))
+  bin_names <- unlist(lapply(seq(1:max(bin_size)), 
+                             function(n) paste(2^(n-1), "-", 2^n -1)))
   bin_names[1] <- "1"
   barplot(x, names.arg = bin_names,
           main = "Some title",
