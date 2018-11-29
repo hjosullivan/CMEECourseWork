@@ -13,6 +13,8 @@ High Performance Computing Programming Exercises
 * HPC_sims.R
     * Enables a larger neutral theory simulation to be run
     with HPC.
+* Run_HPC.sh
+    * A bash script to run HPC_sims.R on HPC. 
 
 ### Fractals in Nature
 * fractals.R
