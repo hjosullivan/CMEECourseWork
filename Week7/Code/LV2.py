@@ -23,15 +23,16 @@ def main(argv=[]):
     __author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
     __appname__ = "Lokta - Volterra 2"
     __version__ = "0.0.1"
+    __date__ = "November 2018"
     __license__ = "I do not have one"
 
-    #import packages
+    # Import packages
     import sys
     import scipy as sc
     import scipy.integrate as integrate
 
-    #define function to return growth rate of consumer
-    #and resource population at any given time steps.
+    # Define function to return growth rate of consumer
+    # and resource population at any given time steps.
     def dCR_dt(pops, t = 0):
         """ A function that returns growth rate
         of consumer and resource population at
@@ -40,47 +41,48 @@ def main(argv=[]):
 
         R = pops[0] #assign R first column (list)
         C = pops[1] #assign C to second column (list)
-        dRdt = r * R * (1 - R/K) - a * C * R
+        dRdt = r * R * (1 - (R/K)) - a * C * R
         dCdt = -z * C + e * a * C * R
 
         return sc.array([dRdt, dCdt])
 
-    #check type of object
+    # Check type of object
     type(dCR_dt)
 
-    #using system arugments
+    # Take system arugments
     try:
         r = float(argv[1])
         a = float(argv[2])
         z = float(argv[3])
         e = float(argv[4])
     except (ValueError, IndexError):
-        print("Something wrong with values given, using default instead!")
+        print("Error with values given, providing default values instead!")
         r = 1.
         a = 0.1
         z = 1.5
         e = 0.75
         print("Calculating Lokta-Volterra model")
 
-    #define time vector
-    #from time point 0 to 15
-    #using 1000 sub-divisions of time
-    t = sc.linspace(0, 15, 1000) #again values are arbitrary
+    # Define time vector
+    # Time point 0 to 15
+    # 1000 sub-divisions of time
+    t = sc.linspace(0, 15, 1000) # (values are arbitrary)
 
-    #prey carrying capacity
-    K = 250
+    # Define resource carrying capacity
+    K = 50
 
-    #set initial conditions for both populations
-    #10 resources and 5 consumers per unit area
+    # Set initial conditions for both populations
+    # 10 resources and 5 consumers per unit area
     R0 = 10
     C0 = 5
-    RC0 = sc.array([R0, C0]) #convert to array
+    RC0 = sc.array([R0, C0]) # Convert to array of lists
 
-    #numerically integrate this system from those starting conditions
+    # Numerically integrate this system from starting conditions
     pops, infodict = integrate.odeint(dCR_dt, RC0, t,
     full_output = True)
 
-    #view array
+    # View array
+    # Contains population trajectories
     pops
 
     type(infodict)
@@ -95,9 +97,11 @@ def main(argv=[]):
 
     import matplotlib.pylab as p
 
-    #first plot
-    #open empty figure object
+    # First plot
+    # Open empty figure object
     f1 = p.figure()
+
+    # Plot
     p.plot(t, pops[:,0], "g-", label = "Resource density")
     p.plot(t, pops[:,1], "b-", label = "Consumer density")
     p.grid()
@@ -105,10 +109,10 @@ def main(argv=[]):
     p.xlabel("Time")
     p.ylabel("Population density")
     p.title("Consumer-Resource population dynamics, r = {:.2}, a = {:.2}, z = {:.2}, e = {:.2}".format(r,a,z,e), fontsize  = 10)
-    #save to pdf in results directory
+    # Save pdf in results directory
     f1.savefig("../Results/LV2_model.pdf")
 
-    #open empty figure object
+    # Open empty figure object
     f2 = p.figure()
     p.plot(pops[:,0],pops[:,1],"r-")
     p.grid()
@@ -117,7 +121,7 @@ def main(argv=[]):
     p.ylabel("Consumer density")
     p.title("Consumer-Resource population dynamics")
 
-    #save to pdf in results directory
+    # Save pdf in results directory
     f2.savefig("../Results/LV2_phase.pdf")
 
 if __name__== "__main__":
