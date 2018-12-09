@@ -45,6 +45,12 @@ CMEE coursework for week three: Biological Computing in R.
     * A shell script to test get_TreeHeight.R.
 * Vectorize2.R
     * Vectorization of the stochastic Ricker model.
+* Vectorize1.py
+    * A python version of Vectorize2.R.
+* Vectorize2.py
+    * A python version of Vectorize2.R.
+* TimeVecs.sh
+    * A shell script to time all Vectorize scripts.
 * TAutoCorr.R
     * Autocorrelation in weather.
 * TAutoCorrLaTeX.tex
@@ -58,11 +64,7 @@ CMEE coursework for week three: Biological Computing in R.
 * PP_Regress.R
     * Visualization of predator-prey interactions with ggplot2.
 * PP_Regress_loc.R
-    * Visualization of predator-prey interactions with ggplot2. 
-
-
-
-
+    * Visualization of predator-prey interactions with ggplot2.
 
 ## Authors
 
