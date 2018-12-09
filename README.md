@@ -1,6 +1,5 @@
 # CMEE Coursework
 
-Imperial College London
 MRes Computational Methods in Ecology and Evolution
 
 ## Contents
