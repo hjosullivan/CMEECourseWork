@@ -9,14 +9,16 @@ __appname__ = "runLV"
 __version__ = "0.0.1"
 __license__ = "I do not have one"
 
-#import modules
+# Import modules
 import cProfile
 import pstats
 from io import StringIO
 import LV1
 import LV2
+import LV3
+import LV4
 
-#profile LV1
+# Profile LV1
 pr = cProfile.Profile()
 
 pr.enable()
@@ -25,21 +27,35 @@ pr.disable()
 
 s = StringIO()
 ps = pstats.Stats(pr, stream=s)
-ps.print_stats(0).sort_stats("calls") #sort by calls
+ps.print_stats(0).sort_stats("calls") # Sort by calls
 
 print("Profiling LV1.py:")
 print(s.getvalue())
 
-#profile LV2
-pr2 = cProfile.Profile()
+# Profile LV2
+pr = cProfile.Profile()
 
-pr2.enable()
+pr.enable()
 LV2.main([])
-pr2.disable()
+pr.disable()
 
-s2 = StringIO()
-ps2 = pstats.Stats(pr2, stream=s2)
-ps2.print_stats(0).sort_stats("calls") #sort by calls
+s = StringIO()
+ps = pstats.Stats(pr, stream=s)
+ps.print_stats(0).sort_stats("calls") # Sort by calls
 
-print("Profiling LV1.py:")
-print(s2.getvalue())
+print("Profiling LV2.py:")
+print(s.getvalue())
+
+# Profile LV3
+pr = cProfile.Profile()
+
+pr.enable()
+LV3.main([])
+pr.disable()
+
+s = StringIO()
+ps = pstats.Stats(pr, stream=s)
+ps.print_stats(0).sort_stats("calls") # Sort by calls
+
+print("Profiling LV3.py:")
+print(s.getvalue())
