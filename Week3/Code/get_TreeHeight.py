@@ -79,12 +79,12 @@ with open(outpath,'w') as resultFile:
     wr.writerows(csvdata)
 
 
-import pandas as pd
+#import pandas as pd
 # read csv file in
-df = pd.read_csv(Trees)
+#df = pd.read_csv(Trees)
 # make a new column for tree height and vectorize the function TreeHeight
-df["Height.m"] = TreeHeight(degrees=df["Angle.degrees"], distance=df["Distance.m"])
+#df["Height.m"] = TreeHeight(degrees=df["Angle.degrees"], distance=df["Distance.m"])
 # set path you want to save to
-outpath ="../Results/{}_treeheights.csv".format(Trees.split("/")[-1].replace(".csv", ""))
+#outpath ="../Results/{}_treeheights.csv".format(Trees.split("/")[-1].replace(".csv", ""))
 # write file to csv
-df.to_csv(outpath, index=False)
+#df.to_csv(outpath, index=False)
