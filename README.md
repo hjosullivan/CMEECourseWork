@@ -4,14 +4,14 @@ MRes Computational Methods in Ecology and Evolution
 
 ## Contents
 
-### Week1
+### Week 1
 
 * Introduction to Unix and Linux
     * Shell scripting
     * Version control with Git
     * Scientific documents with LaTex
 
-### Week2
+### Week 2
 
 * Biological computing in Python -1
     * Variables, operators and data structures
@@ -20,7 +20,7 @@ MRes Computational Methods in Ecology and Evolution
     * Unit testing and debugging
     * Functions, modules and code compartmentalization
 
-### Week3
+### Week 3
 
 * Biological computing in R
     * Variables, operators and data structures
@@ -31,22 +31,22 @@ MRes Computational Methods in Ecology and Evolution
     * Data wrangling
     * Visualisation
 
-### Week4
+### Week 4
 
 * Statistics
     * No coursework for this week
 
-### Week5
+### Week 5
 
 * GIS
     * No coursework for this week
 
-### Week6
+### Week 6
 
 * Genomics
     * No coursework for this week
 
-### Week7
+### Week 7
 
 * Biological computing in Python -2
     * Numerical computing in Python
@@ -56,12 +56,12 @@ MRes Computational Methods in Ecology and Evolution
     * Regular expressions
     * Building workflows
 
-### Week8
+### Week 8
 
 * Mini-project hackathon
     * No coursework for this week
 
-### Week9
+### Week 9
 
 * High Performance Computing
     * Neutral theory simulations
