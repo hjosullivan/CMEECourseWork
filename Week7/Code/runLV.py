@@ -59,3 +59,17 @@ ps.print_stats(0).sort_stats("calls") # Sort by calls
 
 print("Profiling LV3.py:")
 print(s.getvalue())
+
+# Profile LV4
+pr = cProfile.Profile()
+
+pr.enable()
+LV4.main([])
+pr.disable()
+
+s = StringIO()
+ps = pstats.Stats(pr, stream=s)
+ps.print_stats(0).sort_stats("calls") # Sort by calls
+
+print("Profiling LV4.py:")
+print(s.getvalue())
