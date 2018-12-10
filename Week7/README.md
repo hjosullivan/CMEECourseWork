@@ -1,4 +1,4 @@
-# Week 3
+# Week 7
 
 CMEE coursework for week seven: Python II.
 
@@ -19,6 +19,13 @@ CMEE coursework for week seven: Python II.
 ### Practicals
 * LV2.py
     * Lokta-Volterra script taking arguments from the command line. Includes prey density dependence.
+* LV3.py
+    * Lokta-Volterra model in discrete time with equilibrium.
+* LV4.py
+    * Lokta-Volterra model in discrete time with equilibrium and
+    a random gaussian fluctuation in resource's growth rate.
+* runLV.py
+    * A profiling script to compare all LV models.
 * DrawFW.py
     * A food web network example using `networkx`.
 * blackbirds.py
