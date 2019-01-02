@@ -23,8 +23,20 @@ SumAllElements <- function(M){
   return (Tot)
 }
 
-## This on my computer takes about 1 sec
-print(system.time(SumAllElements(M)))
-## While this takes about 0.01 sec
-print(system.time(sum(M)))
+# Time this function
+# Start the clock!
+start_time <- as.numeric(proc.time()[3])
+
+# Run function... tick tock
+total <- (SumAllElements(M)) 
+
+# Stop the clock!
+end_time <- as.numeric(proc.time()[3])
+
+# Get the elapsed time
+elapsed_time <- end_time - start_time 
+
+# Print the elapsed time. 
+sprintf("The sum of all elements takes %ss to run.", round(elapsed_time, digits = 3))
+
 
