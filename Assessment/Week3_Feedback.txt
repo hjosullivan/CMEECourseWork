@@ -141,10 +141,15 @@ I don't have one
 * --
 **********************************************************************
 
-Found following files in results directory: .gitignore, TAutoCorrLaTeX.pdf...
+Found following files in results directory: TreeHts.csv, PP_Regress_loc.csv, PP_Results.csv, PP_Regress.pdf, trees_treeheights.csv, default_treeheights.csv, Pred_Lattice.pdf, Prey_Lattice.pdf, MyLinReg.pdf, .gitignore, PP_Regress.csv, TAutoCorrLaTeX.pdf, SizeRatio_Lattice.pdf, MyBars.pdf, MyData.csv...
 ideally, Results directory should be empty other than, perhaps, a readme. 
 
 Found 28 code files: browse.R, PP_Regress.R, apply1.R, sample.R, run_get_TreeHeight.sh, CompileLaTeX.sh, boilerplate.R, TAutoCorrLaTeX.tex, gpdd_map.R, TreeHeight.R, PP_Lattice.R, next.R, Girko.R, Vectorize1.R, break.R, plotLin.R, basic_io.R, try.R, apply2.R, get_TreeHeight.R, TAutoCorr.R, Vectorize2.R, DataWrangTidy.R, preallocate.R, PP_Regress_loc.R, DataWrang.R, MyBars.R, control.R
+
+Found the following extra files: Rplots.pdf
+0.5 pt deducted per extra file
+
+Current Points = 99.5
 
 ======================================================================
 Testing script/code files...
@@ -210,7 +215,7 @@ debug: browser()
 
 Code ran without errors
 
-Time consumed = 0.11171s
+Time consumed = 0.13981s
 
 ======================================================================
 Inspecting script file PP_Regress.R...
@@ -470,18 +475,18 @@ Testing apply1.R...
 Output (only first 500 characters): 
 
 **********************************************************************
- [1]  0.22524563  0.05531871  0.37534637 -0.26952953  0.38103980 -0.19145843
- [7] -0.40400364 -0.13265033 -0.33169247  0.36946986
- [1] 0.6120984 0.7960243 1.0771634 0.3969443 1.1205103 0.7611171 1.4934833
- [8] 1.0374860 1.2451004 0.7858882
- [1]  0.01177946  0.16951601 -0.22711787  0.10302240  0.10773463  0.17845966
- [7] -0.31738330 -0.16620989  0.17326885  0.04401599
+ [1]  0.3348888  0.2111700 -0.4925962 -0.2499474 -0.1491968 -0.1367678
+ [7] -0.1051517  0.2328139 -0.6265598 -0.2300076
+ [1] 1.4133955 0.8758566 1.7167253 1.0002943 1.4813845 0.6201593 1.6138310
+ [8] 0.9432315 0.6420172 1.0559752
+ [1] -0.223064226 -0.058140174 -0.306463288 -0.490978977 -0.007343355
+ [6] -0.258519267 -0.105512042 -0.123647901 -0.014270907  0.376585658
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.06495s
+Time consumed = 0.06477s
 
 ======================================================================
 Inspecting script file sample.R...
@@ -526,22 +531,22 @@ Testing sample.R...
 Output (only first 500 characters): 
 
 **********************************************************************
-[1] "Mean of this sample was: 0.171663686667863"
-[1] "Mean of this sample was: 0.0614704752591587"
-[1] "Mean of this sample was: 0.0578394474174401"
-[1] "Mean of this sample was: -0.202457091515584"
-[1] "Mean of this sample was: 0.0534289353384874"
-[1] "Mean of this sample was: -0.0606320755108267"
-[1] "Mean of this sample was: -0.138855345240442"
-[1] "Mean of this sample was: 0.177569932051706"
-[1] "Mean of this sample was: 0.176152437036319"
-[1] "Mean of this sample was: 0.0482981889871298"
-[1]
+[1] "Mean of this sample was: -0.10394430717174"
+[1] "Mean of this sample was: 0.000177420563225408"
+[1] "Mean of this sample was: -0.0574559508944774"
+[1] "Mean of this sample was: -0.208231967628235"
+[1] "Mean of this sample was: -0.132747462109486"
+[1] "Mean of this sample was: 0.180885650703849"
+[1] "Mean of this sample was: 0.277025959590664"
+[1] "Mean of this sample was: -0.0140882183445527"
+[1] "Mean of this sample was: -0.12138198193142"
+[1] "Mean of this sample was: 0.155793374958438"
+[1
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.10075s
+Time consumed = 0.09714s
 
 ======================================================================
 Inspecting script file run_get_TreeHeight.sh...
@@ -707,7 +712,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.08894s
+Time consumed = 0.08294s
 
 ======================================================================
 Inspecting script file TAutoCorrLaTeX.tex...
@@ -1027,7 +1032,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.09663s
+Time consumed = 0.08377s
 
 ======================================================================
 Inspecting script file Girko.R...
@@ -1151,15 +1156,15 @@ Output (only first 500 characters):
 
 **********************************************************************
    user  system elapsed 
-  0.084   0.004   0.088 
+  0.088   0.000   0.087 
    user  system elapsed 
-  0.004   0.000   0.001 
+  0.000   0.000   0.001 
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.22746s
+Time consumed = 0.22318s
 
 ======================================================================
 Inspecting script file break.R...
@@ -1222,7 +1227,7 @@ i equals  19
 
 Code ran without errors
 
-Time consumed = 0.08456s
+Time consumed = 0.08342s
 
 ======================================================================
 Inspecting script file plotLin.R...
@@ -1388,30 +1393,19 @@ Testing try.R...
 Output (only first 500 characters): 
 
 **********************************************************************
-[1] "Mean of this sample was: -0.10787527886989"
-[1] "Mean of this sample was: 0.0651603253967731"
-[1] "Mean of this sample was: 0.185261109259845"
-[1] "Mean of this sample was: 0.058739689174137"
-[1] "Mean of this sample was: 0.17090843642049"
-[1] "Mean of this sample was: 0.103046863282311"
-[1] "Mean of this sample was: 0.00997402814488788"
-[1] "Mean of this sample was: 0.182015774614094"
-[1] "Mean of this sample was: 0.166577642507568"
-[1] "Mean of this sample was: 0.117932235971422"
-[1] "Mean
+[1] "Mean of this sample was: 0.0667219507956457"
+[1] "Mean of this sample was: 0.0397288374489907"
+[1] "Mean of this sample was: 0.145240953069726"
+[1] "Mean of this sample was: -0.389867954448647"
+[1] "Mean of this sample was: -0.0416369132294112"
+[1] "Mean of this sample was: -0.0854013679932923"
+[1] "Mean of this sample was: -0.120561160788251"
+[1] "Mean of this sample was: -0.101724700624344"
+[1] "Mean of this sample was: -0.323062841247903"
+[1] "Mean of this sample was: -0.0142627219308217"
 **********************************************************************
 
 Encountered error:
-Error in doit(x) : Couldn't calculate mean: too few unique points!
-Error in doit(x) : Couldn't calculate mean: too few unique points!
-Error in doit(x) : Couldn't calculate mean: too few unique points!
-Error in doit(x) : Couldn't calculate mean: too few unique points!
-Error in doit(x) : Couldn't calculate mean: too few unique points!
-Error in doit(x) : Couldn't calculate mean: too few unique points!
-Error in doit(x) : Couldn't calculate mean: too few unique points!
-Error in doit(x) : Couldn't calculate mean: too few unique points!
-Error in doit(x) : Couldn't calculate mean: too few unique points!
-Error in doit(x) : Couldn't calculate mean: too few unique points!
 Error in doit(x) : Couldn't calculate mean: too few unique points!
 Error in doit(x) : Couldn't calculate mean: too few unique points!
 Error in doit(x) : Couldn't calculate mean: too few unique points!
@@ -1493,18 +1487,18 @@ Testing apply2.R...
 Output (only first 500 characters): 
 
 **********************************************************************
-             [,1]        [,2]       [,3]       [,4]       [,5]       [,6]
- [1,]  -70.720985 -0.17902572  1.4443054 -1.4792345   12.04780  0.1487909
- [2,]   -2.224997  0.09849402  0.4000267  0.3428096   58.98441  0.4344153
- [3,]   30.402023 -1.58675178 -1.1365674 -0.2421857   84.04168 -0.3499039
- [4,]   25.622582 -0.15884634  0.7188123  1.3684665 -110.23478 -0.8620911
- [5,]   30.307877 -0.31985987 -2.1697836 -0.5312857   -8.71598 -0.1036190
- [6,]   52.511417  1.88742790 -1.7621320 -0.3759483  206.
+           [,1]       [,2]        [,3]       [,4]       [,5]       [,6]
+ [1,] 122.18398   15.16620 -0.75199574  235.32072 -0.5181685  85.058250
+ [2,] -12.72839   43.41601 -1.03740005  192.52378  0.1800996  96.792808
+ [3,] 118.44923   28.01614  0.02726022  289.08550 -0.7924142  35.705422
+ [4,] -23.85403 -153.78102  0.67010313 -159.67287  0.1551779 -43.939740
+ [5,] 114.56842  216.47409  1.76223159  -88.79221 -1.6136670 -32.810577
+ [6,] -47.94564  113.91844 -0.43159348   63.35456  0.1666844  55.2834
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.08881s
+Time consumed = 0.09206s
 
 ======================================================================
 Inspecting script file get_TreeHeight.R...
@@ -1765,16 +1759,16 @@ Output (only first 500 characters):
 **********************************************************************
 [1] "Original Ricker takes:"
    user  system elapsed 
-  0.252   0.004   0.256 
+  0.240   0.004   0.245 
 [1] "Vectorized Stochastic Ricker takes:"
    user  system elapsed 
-  0.016   0.000   0.018 
+  0.016   0.000   0.019 
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.39645s
+Time consumed = 0.38204s
 
 ======================================================================
 Inspecting script file DataWrangTidy.R...
@@ -1931,7 +1925,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 10.00428s
+Time consumed = 10.00403s
 
 ======================================================================
 Inspecting script file PP_Regress_loc.R...
@@ -2391,7 +2385,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.11563s
+Time consumed = 0.10520s
 
 ======================================================================
 ======================================================================
@@ -2404,6 +2398,6 @@ Ran into 16 errors
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 100
+Current Points for the Week = 99.5
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!

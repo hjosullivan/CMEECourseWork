@@ -9,7 +9,7 @@ Note that:
 
 ======================================================================
 ======================================================================
-Your Git repo size this week is about 1.51 MiB on disk 
+Your Git repo size this week is about 1.94 MiB on disk 
 
 PART 1: Checking project workflow...
 
@@ -25,10 +25,10 @@ Printing contents of .gitignore:
 **********************************************************************
 *~
 *.tmp
-*.pdf
 *.pyc
 .DS_Store
 .Rhistory
+/Week5/
 **********************************************************************
 
 Found README in parent directory, named: README.txt
@@ -124,7 +124,9 @@ I don't have one
 * --
 **********************************************************************
 
-Found following files in results directory: .gitignore...
+Found following files in results directory: JustOaksData.csv, bodymass.csv, testout.txt, align_seqs_fasta.txt, align_seqs_pickle.p, align_seqs.txt, .gitignore, testp.p...
+ideally, Results directory should be empty other than, perhaps, a readme. 
+
 Found 21 code files: lc2.py, boilerplate.py, basic_csv.py, cfexercises2.py, align_seqs_better.py, dictionary.py, debugme.py, scope.py, cfexercises1.py, tuple.py, basic_io.py, lc1.py, oaks_debugme.py, oaks.py, loops.py, using_name.py, align_seqs.py, sysargv.py, align_seqs_fasta.py, control_flow.py, test_control_flow.py
 
 ======================================================================
@@ -222,7 +224,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.01384s
+Time consumed = 0.04216s
 
 ======================================================================
 Inspecting script file boilerplate.py...
@@ -272,7 +274,7 @@ This is a boilerplate
 
 Code ran without errors
 
-Time consumed = 0.01559s
+Time consumed = 0.04045s
 
 ======================================================================
 Inspecting script file basic_csv.py...
@@ -337,19 +339,19 @@ Output (only first 500 characters):
 
 **********************************************************************
 ['Species', 'Infraorder', 'Family', 'Distribution', 'Body mass male (Kg)']
-('The species is', 'Species')
+The species is Species
 ['Daubentonia_madagascariensis', 'Chiromyiformes ', 'Daubentoniidae', 'Madagascar', '2.7']
-('The species is', 'Daubentonia_madagascariensis')
+The species is Daubentonia_madagascariensis
 ['Allocebus_trichotis', 'Lemuriformes', 'Cheirogaleidae', 'Madagascar', '0.1']
-('The species is', 'Allocebus_trichotis')
+The species is Allocebus_trichotis
 ['Avahi_laniger', 'Lemuriformes', 'Indridae', 'America', '1.03']
-('The species is', 'Avahi_laniger')
-['Avahi_occidentalis', 'Lemurifo
+The species is Avahi_laniger
+['Avahi_occidentalis', 'Lemuriformes', 'Indridae', 'Madagasc
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.01379s
+Time consumed = 0.03612s
 
 ======================================================================
 Inspecting script file cfexercises2.py...
@@ -451,8 +453,8 @@ Found one or more doctrings!
 Output (only first 500 characters): 
 
 **********************************************************************
-4.69041575982
-3.60555127546
+4.69041575982343
+3.605551275463989
 9
 17
 [3, 6, 15]
@@ -468,7 +470,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.01483s
+Time consumed = 0.03735s
 
 ======================================================================
 Inspecting script file align_seqs_better.py...
@@ -615,7 +617,7 @@ There were 1 alignments with this score
 
 Code ran without errors
 
-Time consumed = 2.24642s
+Time consumed = 3.71106s
 
 ======================================================================
 Inspecting script file dictionary.py...
@@ -690,13 +692,13 @@ Current Points = 97
 Output (only first 500 characters): 
 
 **********************************************************************
-{'Rodentia': set(['Peromyscus crinitus', 'Mus domesticus', 'Gerbillus henleyi', 'Cleithrionomys rutilus']), 'Afrosoricida': set(['Microgale dobsoni', 'Microgale talazaci']), 'Chiroptera': set(['Myotis lucifugus']), 'Carnivora': set(['Arctocephalus gazella', 'Lyacon pictus', 'Canis lupus'])}
+{'Afrosoricida': {'Microgale talazaci', 'Microgale dobsoni'}, 'Carnivora': {'Lyacon pictus', 'Arctocephalus gazella', 'Canis lupus'}, 'Chiroptera': {'Myotis lucifugus'}, 'Rodentia': {'Mus domesticus', 'Peromyscus crinitus', 'Gerbillus henleyi', 'Cleithrionomys rutilus'}}
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.01304s
+Time consumed = 0.02786s
 
 ======================================================================
 Inspecting script file debugme.py...
@@ -831,15 +833,14 @@ Found one or more doctrings!
 Output (only first 500 characters): 
 
 **********************************************************************
-Inside the function, the value is  5
-Inside the function, the value is  4
-Outside the function, the value is 10
 
 **********************************************************************
 
-Code ran without errors
-
-Time consumed = 0.01275s
+Encountered error:
+  File "scope.py", line 18
+    print "Inside the function, the value is ", _a_global
+                                             ^
+SyntaxError: Missing parentheses in call to 'print'
 
 ======================================================================
 Inspecting script file cfexercises1.py...
@@ -944,7 +945,7 @@ hello
 
 Code ran without errors
 
-Time consumed = 0.01107s
+Time consumed = 0.03158s
 
 ======================================================================
 Inspecting script file tuple.py...
@@ -1011,7 +1012,7 @@ Tachycineata bicolor Tree swallow 20.2
 
 Code ran without errors
 
-Time consumed = 0.01457s
+Time consumed = 0.03491s
 
 ======================================================================
 Inspecting script file basic_io.py...
@@ -1121,13 +1122,13 @@ Third line
 
 Fourth line
 
-{'another key': 11, 'a key': 10}
+{'a key': 10, 'another key': 11}
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.02016s
+Time consumed = 0.03765s
 
 ======================================================================
 Inspecting script file lc1.py...
@@ -1215,15 +1216,15 @@ Output (only first 500 characters):
 ['Passerculus sandwichensis', 'Delichon urbica', 'Junco phaeonotus', 'Junco hyemalis', 'Tachycineata bicolor']
 ['Savannah sparrow', 'House martin', 'Yellow-eyed junco', 'Dark-eyed junco', 'Tree swallow']
 [18.7, 19, 19.5, 19.6, 20.2]
-set(['Junco hyemalis', 'Passerculus sandwichensis', 'Junco phaeonotus', 'Tachycineata bicolor', 'Delichon urbica'])
-set(['Savannah sparrow', 'House martin', 'Dark-eyed junco', 'Yellow-eyed junco', 'Tree swallow'])
-set([19.5, 20.2, 19, 18.7, 19.6])
+{'Junco phaeonotus', 'Delichon urbica', 'Passerculus sandwichensis', 'Junco hyemalis', 'Tachycineata bicolor'}
+{'Tree swallow', 'Yellow-eyed junco', 'Savannah sparrow', 'House martin', 'Dark-eyed junco'}
+{19.5, 19.6, 18.7, 19, 20.2}
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.01821s
+Time consumed = 0.03094s
 
 ======================================================================
 Inspecting script file oaks_debugme.py...
@@ -1320,7 +1321,7 @@ Quercus petraea
 
 Code ran without errors
 
-Time consumed = 0.04025s
+Time consumed = 0.07748s
 
 ======================================================================
 Inspecting script file oaks.py...
@@ -1392,16 +1393,16 @@ Current Points = 92
 Output (only first 500 characters): 
 
 **********************************************************************
-set(['Quercus robur', 'Quercus cerris', 'Quercus petraea'])
-set(['Quercus robur', 'Quercus cerris', 'Quercus petraea'])
-set(['QUERCUS ROBUR', 'QUERCUS CERRIS', 'QUERCUS PETRAEA'])
-set(['QUERCUS ROBUR', 'QUERCUS CERRIS', 'QUERCUS PETRAEA'])
+{'Quercus cerris', 'Quercus petraea', 'Quercus robur'}
+{'Quercus cerris', 'Quercus petraea', 'Quercus robur'}
+{'QUERCUS ROBUR', 'QUERCUS CERRIS', 'QUERCUS PETRAEA'}
+{'QUERCUS ROBUR', 'QUERCUS CERRIS', 'QUERCUS PETRAEA'}
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.01376s
+Time consumed = 0.03065s
 
 ======================================================================
 Inspecting script file loops.py...
@@ -1492,7 +1493,7 @@ GERONIMO! infinite loop! ctrl+c to s
 
 Code ran without errors
 
-Time consumed = 10.58997s
+Time consumed = 10.30723s
 
 ======================================================================
 Inspecting script file using_name.py...
@@ -1538,7 +1539,7 @@ This program is being run by itself
 
 Code ran without errors
 
-Time consumed = 0.08294s
+Time consumed = 0.10843s
 
 ======================================================================
 Inspecting script file align_seqs.py...
@@ -1661,7 +1662,7 @@ Found one or more doctrings!
 Output (only first 500 characters): 
 
 **********************************************************************
-('ATCGCCGGATTACGGG', 'ATCGCCGGATTACGGG')
+ATCGCCGGATTACGGG ATCGCCGGATTACGGG
 ****************
 ATCGCCGGATTACGGG
 ATCGCCGGATTACGGG
@@ -1702,11 +1703,12 @@ ATCGCCGGATTACGGG
 ATCGCCGGATTACGGG
 3
 
+......
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.05926s
+Time consumed = 0.08741s
 
 ======================================================================
 Inspecting script file sysargv.py...
@@ -1746,15 +1748,15 @@ Current Points = 89
 Output (only first 500 characters): 
 
 **********************************************************************
-('This is the name of the script:', 'sysargv.py')
-('Number of arguments: ', 1)
-('The argumnts are:', "['sysargv.py']")
+This is the name of the script: sysargv.py
+Number of arguments:  1
+The argumnts are: ['sysargv.py']
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.06170s
+Time consumed = 0.04625s
 
 ======================================================================
 Inspecting script file align_seqs_fasta.py...
@@ -1893,7 +1895,7 @@ No arguments provided, using default.
 
 Code ran without errors
 
-Time consumed = 2.56513s
+Time consumed = 3.96829s
 
 ======================================================================
 Inspecting script file control_flow.py...
@@ -2012,7 +2014,7 @@ True
 
 Code ran without errors
 
-Time consumed = 0.03125s
+Time consumed = 0.04603s
 
 ======================================================================
 Inspecting script file test_control_flow.py...
@@ -2100,9 +2102,9 @@ Output (only first 500 characters):
 
 **********************************************************************
 
-Encountered error:
-  File "test_control_flow.py", line 53
-SyntaxError: Non-ASCII character '\xc2' in file test_control_flow.py on line 53, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+Code ran without errors
+
+Time consumed = 0.07880s
 
 ======================================================================
 ======================================================================
