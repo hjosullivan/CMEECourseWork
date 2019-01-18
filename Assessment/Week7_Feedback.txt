@@ -9,13 +9,13 @@ Note that:
 
 ======================================================================
 ======================================================================
-Your Git repo size this week is about 1.94 MiB on disk 
+Your Git repo size this week is about 2.01 MiB on disk 
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week1, Assessment, Week2, .git, Week3
+Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week8, Week5, Week2, Week9, Week4, .git, Week3
 
-Found the following files in parent directory: README.txt, .gitignore
+Found the following files in parent directory: .gitignore, README.md
 
 Checking for key files in parent directory...
 
@@ -28,20 +28,99 @@ Printing contents of .gitignore:
 *.pyc
 .DS_Store
 .Rhistory
-/Week5/
+_pycache_
 **********************************************************************
 
-Found README in parent directory, named: README.txt
+Found README in parent directory, named: README.md
 
-Printing contents of README.txt:
+Printing contents of README.md:
 **********************************************************************
-My CMEE Coursework Repository
+# CMEE Coursework
+
+MRes Computational Methods in Ecology and Evolution
+
+## Contents
+
+### Week 1
+
+* Introduction to Unix and Linux
+    * Shell scripting
+    * Version control with Git
+    * Scientific documents with LaTex
+
+### Week 2
+
+* Biological computing in Python -1
+    * Variables, operators and data structures
+    * Input/output
+    * Writing programs
+    * Unit testing and debugging
+    * Functions, modules and code compartmentalization
+
+### Week 3
+
+* Biological computing in R
+    * Variables, operators and data structures
+    * Input/output
+    * Writing programs
+    * Unit testing and debugging
+    * Functions, modules and code compartmentalization
+    * Data wrangling
+    * Visualisation
+
+### Week 4
+
+* Statistics
+    * No coursework for this week
+
+### Week 5
+
+* GIS
+    * No coursework for this week
+
+### Week 6
+
+* Genomics
+    * No coursework for this week
+
+### Week 7
+
+* Biological computing in Python -2
+    * Numerical computing in Python
+    * Introduction to numpy and scipy
+    * Plotting in Python
+    * Networks
+    * Regular expressions
+    * Building workflows
+
+### Week 8
+
+* Mini-project hackathon
+    * No coursework for this week
+
+### Week 9
+
+* High Performance Computing
+    * Neutral theory simulations
+    * Fractals
+
+## Authors
+
+* **Hannah O'Sullivan**
+
+## License
+
+I don't have one
+
+## Acknowledgments
+
+* --
 **********************************************************************
 
 ======================================================================
 Looking for the weekly directories...
 
-Found 3 weekly directories: Week1, Week2, Week3
+Found 9 weekly directories: Week1, Week2, Week3, Week4, Week5, Week6, Week7, Week8, Week9
 
 The Week7 directory will be assessed 
 
@@ -50,10 +129,1553 @@ The Week7 directory will be assessed
 PART 2: Checking weekly code and workflow...
 
 ======================================================================
+Assessing WEEK7...
+
+Found the following directories: Code, Data, Results
+
+Found the following files: README.md
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+**********************************************************************
+# Week 7
+
+CMEE coursework for week seven: Python II.
+
+## Contents
+
+### Lessons
+* LV1.py
+    * Numerical integration with `scipy` in Python for solving the Lokta-Volterra model.
+* profileme.py
+    * Profiling exercise in `ipython`.
+* profileme2.py
+    * An optimised version of `profileme.py`.
+* timeitme.py
+    * Using `timeit` to time functions.
+* regex.py
+    * Regular expression exercise.
+
+### Practicals
+* LV2.py
+    * Lokta-Volterra script taking arguments from the command line. Includes prey density dependence.
+* LV3.py
+    * Lokta-Volterra model in discrete time with equilibrium.
+* LV4.py
+    * Lokta-Volterra model in discrete time with equilibrium and
+    a random gaussian fluctuation in resource's growth rate.
+* runLV.py
+    * A profiling script to compare all LV models.
+* DrawFW.py
+    * A food web network example using `networkx`.
+* blackbirds.py
+    * Regex practical.
+* using_os.py
+    * An exercise using `subprocess.os.walk())`.
+* fmr.R
+    * Example Rscript.
+* run_fmr_R.py
+    * Running Rscript from Python.
+
+
+## Authors
+
+* **Hannah O'Sullivan**
+
+## License
+
+I don't have one
+
+## Acknowledgments
+
+* --
+**********************************************************************
+
+Found following files in results directory: .gitignore...
+
+Found 16 code files: TestR.py, regexs.py, LV3.py, profileme2.py, timeitme.py, blackbirds.py, TestR.R, profileme.py, LV4.py, fmr.R, using_os.py, LV1.py, DrawFW.py, runLV.py, run_fmr_R.py, LV2.py
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file TestR.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python
+import subprocess
+
+"""
+
+Basic subprocess example
+
+"""
+
+#open and run Rscript
+subprocess.Popen("/usr/bin/env Rscript --verbose TestR.R > \
+../Results/TestR.Rout 2> ../Results/TestR_errFile.Rout",\
+shell=True).wait()
+**********************************************************************
+
+Testing TestR.py...
+
+TestR.py is a Python script file;
+ checking for docstrings...
+
+Found no doctrings!
+1 pt deducted
+
+Current Points = 99
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.10325s
+
+======================================================================
+Inspecting script file regexs.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+
+"""
+
+Regex examples
+
+"""
+
+import re
+
+#assign string variable
+my_string = "a given string"
+
+#find a space in the string (\s)
+match = re.search(r"\s", my_string)
+print(match)
+
+#to view match use:
+match.group()
+
+##find numeric characters (\d)
+match = re.search(r"\d", my_string)
+print(match)
+
+#to know whether a pattern was matched, use if
+MyStr = "an example"
+
+#find the first word
+match = re.search(r"\w*\s", MyStr)
+if match:
+    print("found a match:", match.group())
+else:
+    print("did not find a match")
+
+match = re.search(r"2", "it takes 2 to tango")
+match.group()
+
+match = re.search(r"\d", "it takes 2 to tango")
+match.group()
+
+match = re.search(r"\d.*", "it takes 2 to tango")
+match.group()
+
+match = re.search(r"\s\w{1,3}\s", "once upon a time")
+match.group()
+
+match = re.search(r"\s\w*$", "once upon a time")
+match.group()
+
+#directly append group to result
+re.search(r"\w*\s\d.*\d", "take 2 grams of H20"). group()
+
+re.search(r"^\w*.*\s", "once upon a time"), group()
+
+#*, +, {} are all "greedy" - they repeat the previous regex
+#as many times possible
+#this may result in matching more text that you want!
+
+#to make it non-greedy use ?
+re.search(r"^\w*.*?\s", "once upon a time").group()
+
+#with an HTML tag:
+re.search(r'<.+>', 'This is a <EM>first</EM> test').group()
+
+re.search(r'<.+?>', 'This is a <EM>first</EM> test').group()
+
+re.search(r'\d*\.?\d*','1432.75+60.22i').group()
+
+re.search(r'[AGTC]+', 'the sequence ATTCGT').group()
+
+re.search(r'\s+[A-Z]\w+\s*\w+', "The bird-shit frog's name is Theloderma asper.").group()
+
+#finding email addresses in a string
+#e.g. find academic name, email and research area
+MyStr = 'Samraat Pawar, s.pawar@imperial.ac.uk, Systems biology and ecological theory'
+match = re.search(r"[\w\s]+,\s[\w\.@]+,\s[\w\s]+",MyStr)
+match.group()
+
+MyStr = 'Samraat Pawar, s-pawar@imperial.ac.uk, Systems biology and ecological theory'
+
+#does not match!
+match = re.search(r"[\w\s]+,\s[\w\.@]+,\s[\w\s&]+",MyStr)
+match.group()
+
+#make the email regex more robust
+match = re.search(r"[\w\s]+,\s[\w\.-]+@[\w\.-]+,\s[\w\s&]+",MyStr)
+match.group()
+
+#yay
+**********************************************************************
+
+Testing regexs.py...
+
+regexs.py is a Python script file;
+ checking for docstrings...
+
+Found no doctrings!
+1 pt deducted
+
+Current Points = 98
+
+Output (only first 500 characters): 
+
+**********************************************************************
+<_sre.SRE_Match object; span=(1, 2), match=' '>
+None
+found a match: an 
+
+**********************************************************************
+
+Encountered error:
+Traceback (most recent call last):
+  File "regexs.py", line 53, in <module>
+    re.search(r"^\w*.*\s", "once upon a time"), group()
+NameError: name 'group' is not defined
+
+======================================================================
+Inspecting script file LV3.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+def main(argv=[]):
+
+    """
+
+    A python script which implements a discrete-time
+    version of the Lokta Volterra model.
+
+    """
+
+    __author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+    __appname__ = "Lokta - Volterra 3"
+    __version__ = "0.0.1"
+    __license__ = "I do not have one"
+
+    # Import necessary modules
+    import scipy as sc
+    import scipy.stats
+    import scipy.integrate as integrate
+
+
+    def Rt1_Ct1(R, C, t = 0):
+        """ A function that returns the growth rate
+        of consumer and resource population  at
+        any given time step."""
+        #R = pops[0] #assign R first column (list)
+        #C = pops[1] #assign C to second column (list)
+        Rt = R
+        Ct = C
+        Rt_1 = Rt * (1 + (r * (1 - (Rt / K))) - a * Ct)
+        Ct_1 = Ct * (1 - z + e * a * Rt)
+
+        return sc.array([Rt_1, Ct_1])
+
+    #check type of object
+    type(Rt1_Ct1)
+
+    # Take system arguments and provide default values
+    try:
+        r = float(argv[1])
+        a = float(argv[2])
+        z = float(argv[3])
+        e = float(argv[4])
+    except (ValueError, IndexError):
+        print("Error with values given, using default instead!")
+        r = 1.
+        a = 0.1
+        z = 1.5
+        e = 0.75
+        print("Calculating Lokta-Volterra model")
+
+    # Define time vector
+    # Time point 0 to 15
+    #1000 sub-divisions of time
+    t = sc.linspace(0, 15, 1000) # (values are arbitrary)
+
+    # Define carrying capaticy(K)
+    K = 50
+
+    # Set initial conditions for both populations
+    # 10 resources and 5 consumers per unit area
+    R0 = 10
+    C0 = 5
+    RC0 = sc.array([[R0, C0]]) # Convert to array of lists
+
+    # Equilibrium occurs when the growth rate is equal to 0.
+
+    # Loop through iterations until the resource and consumer
+    # populations are equal to 0.
+
+    # Loop though 1000 iterations
+    for i in range(1000):
+        pops = Rt1_Ct1(RC0[-1][0], RC0[-1][-1]) # Run the function
+        RC0 = sc.vstack((RC0, pops)) # Vertically stack array
+        if pops[0] < 0: # When the resource is less than 0
+            RC0[-1, 0] = 0 # Resource population is extinct
+            print("Prey population reached extinction at {} iterations".format(i))
+            continue
+        if pops[-1] < 0: # As above
+            RC0[-1, -1] = 0
+            print("Predator population reached extinction at {} iterations".format(i))
+            break
+
+    # Set the time vector to equal the length of RC0
+    t = range(len(RC0))
+
+    ###############################
+    ## Visualize with matplotlib ##
+    ###############################
+
+    # Import module
+    import matplotlib.pylab as p
+
+    # First plot
+    # Open empty figure object
+    f1 = p.figure()
+
+    # Plot
+    p.plot(t, RC0[:,0], "g-", label = "Resource density")
+    p.plot(t, RC0[:,1], "b-", label = "Consumer density")
+    p.grid()
+    p.legend(loc = "best")
+    p.xlabel("Time")
+    p.ylabel("Population density")
+    p.title("Consumer-Resource population dynamics")
+
+    # Save pdf in results directory
+    f1.savefig("../Results/LV3_model.pdf")
+
+    # Second plot
+    # Plot direction fields and trajectories in the phase plane
+    # Open empty figure object
+    f2 = p.figure()
+
+    # Plot
+    p.plot(RC0[:,0],RC0[:,1],"r-")
+    p.grid()
+    p.legend(loc = "best")
+    p.xlabel("Resource density")
+    p.ylabel("Consumer density")
+    p.title("Consumer-Resource population dynamics")
+
+    # Save ddf in results directory
+    f2.savefig("../Results/LV3_phase.pdf")
+
+if __name__== "__main__":
+    import sys
+    main(sys.argv)
+**********************************************************************
+
+Testing LV3.py...
+
+LV3.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Error with values given, using default instead!
+Calculating Lokta-Volterra model
+Prey population reached extinction at 7 iterations
+Predator population reached extinction at 8 iterations
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.83778s
+
+======================================================================
+Inspecting script file profileme2.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+
+"""
+
+A python script that halves the time taken to
+compute profileme.py
+
+"""
+
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "Profileme2"
+__version__ = "0.0.1"
+__date__ = "November 2018"
+__license__ = "I do not have one"
+
+def my_squares(iters):
+    """ Squares the values in a list """
+    out = [i ** 2 for i in range(iters)] #replace loop with lc
+    return out
+
+def my_join(iters, string):
+    """ Build a string the length of iters"""
+    out = " " #a string
+    for i in range(iters):
+        out += ", " + string #concatenate
+    return out
+
+def run_my_funcs(x,y):
+    """ Run functions """
+    print(x,y)
+    my_squares(x)
+    my_join(x,y)
+    return 0
+
+#run with arbitrary values
+run_my_funcs(10000000, "My string")
+**********************************************************************
+
+Testing profileme2.py...
+
+profileme2.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+10000000 My string
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 3.66258s
+
+======================================================================
+Inspecting script file timeitme.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+
+"""
+
+Quick profiling with timeit
+
+"""
+
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "Profileme2"
+__version__ = "0.0.1"
+__date__ = "November 2018"
+__license__ = "I do not have one"
+
+#Loops vs. list comprehensions
+
+iters = 1000000
+
+import timeit
+
+from profileme import my_squares as my_squares_loops
+
+from profileme2 import my_squares as my_squares_lc
+
+#%timeit my_squares_loops(iters)
+#%timeit my_squares_lc(iters)
+
+#Loops vs. join method for strings
+
+from profileme import my_join as my_join_join
+
+from profileme2 import my_join as my_join
+
+#%timeit(my_join_join(iters, mystring))
+#%timeit(my_join(iters,mystring))
+
+#can also time functions like this:
+
+import time
+
+start = time.time()
+my_squares_loops(iters)
+print("my_squares_loops takes %f s to run." %
+(time.time() - start))
+
+start = time.time()
+my_squares_lc(iters)
+print("my_squares_lc takes %f s to run." %
+(time.time() - start))
+**********************************************************************
+
+Testing timeitme.py...
+
+timeitme.py is a Python script file;
+ checking for docstrings...
+
+Found no doctrings!
+1 pt deducted
+
+Current Points = 97
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 10.00239s
+
+======================================================================
+Inspecting script file blackbirds.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+
+"""
+
+Blackbirds regex practical
+
+"""
+
+import re
+
+# Read the file (using a different, more python 3 way, just for fun!)
+with open('../data/blackbirds.txt', 'r') as f:
+    text = f.read()
+
+# replace \t's and \n's with a spaces:
+text = text.replace('\t',' ')
+text = text.replace('\n',' ')
+# You may want to make other changes to the text.
+
+# In particular, note that there are "strange characters" (these are accents and
+# non-ascii symbols) because we don't care for them, first transform to ASCII:
+
+text = text.encode('ascii', 'ignore') # first encode into ascii bytes
+text = text.decode('ascii', 'ignore') # Now decode back to string
+
+# Now extend this script so that it captures the Kingdom, Phylum and Species
+# name for each species and prints it out to screen neatly.
+kps = re.findall(r"Kingdom\s(\w+)\s.+?Phylum\s(\w+)\s.+?Species\s(\w+\s\w+)", text)
+print(kps)
+
+# Hint: you may want to use re.findall(my_reg, text)... Keep in mind that there
+# are multiple ways to skin this cat! Your solution could involve multiple
+# regular expression calls (easier!), or a single one (harder!)
+**********************************************************************
+
+Testing blackbirds.py...
+
+blackbirds.py is a Python script file;
+ checking for docstrings...
+
+Found no doctrings!
+1 pt deducted
+
+Current Points = 96
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error:
+Traceback (most recent call last):
+  File "blackbirds.py", line 12, in <module>
+    with open('../data/blackbirds.txt', 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '../data/blackbirds.txt'
+
+======================================================================
+Inspecting script file TestR.R...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env Rscript
+
+###################
+## test R script ##
+###################
+
+print("Hello, this is R!")**********************************************************************
+
+Testing TestR.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+[1] "Hello, this is R!"
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.06210s
+
+======================================================================
+Inspecting script file profileme.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+
+"""
+
+A python script to exemplify profiling
+alongside profileme2.py
+
+"""
+
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "Profileme"
+__version__ = "0.0.1"
+__date__ = "November 2018"
+__license__ = "I do not have one"
+
+def my_squares(iters):
+    """ Squares the values in a list"""
+    out = [] #list
+    for i in range(iters): #loop is expensive
+        out.append(i**2)
+    return out
+
+def my_join(iters, string):
+    """ build a massive string """
+    out = " " #a string
+    for i in range(iters):
+        out += string.join(", ") #expensive to use .join
+    return out
+
+def run_my_funcs(x,y):
+    """ run functions """
+    print(x,y)
+    my_squares(x)
+    my_join(x,y)
+    return 0
+
+run_my_funcs(10000000, "My string")
+**********************************************************************
+
+Testing profileme.py...
+
+profileme.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+10000000 My string
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 6.47742s
+
+======================================================================
+Inspecting script file LV4.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+def main(argv=[]):
+
+    """
+
+    A discrete-time Lokta-Volterra model
+    with random gaussian fluctuations in the
+    resource's growth at each time-step.
+
+    """
+
+    __author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+    __appname__ = "Lokta - Volterra 4"
+    __version__ = "0.0.1"
+    __license__ = "I do not have one"
+
+    # Import necessary modules
+    import scipy as sc
+    import scipy.integrate as integrate
+    from scipy.stats import norm
+
+    # Define function to return growth rate of consumer
+    # and resource population at any given time step.
+
+    def Rt1_Ct1(R,C, t = 0):
+        """ A function that returns the growth rate
+        of consumer and resource population  at
+        any given time step."""
+        # Gaussian distribution
+        epsilon = float(norm.rvs(size=1)[0])
+        Rt = R
+        Ct = C
+        # Add random fluctuation (epsilon) to both populations
+        Rt_1 = Rt * (1 + epsilon + r + (1 - (Rt / K)) - a * Ct)
+        Ct_1 = Ct * (1 - z + epsilon + e * a * Rt)
+
+        return sc.array([Rt_1, Ct_1])
+
+    # Take system arguments and provide default values
+    try:
+        r = float(argv[1])
+        a = float(argv[2])
+        z = float(argv[3])
+        e = float(argv[4])
+    except (ValueError, IndexError):
+        print("Error with values given, using default values instead!")
+        r = 1.
+        a = 0.1
+        z = 1.5
+        e = 0.75
+        print("Calculating Lokta-Volterra model")
+
+    # Check the type of object
+    type(Rt1_Ct1)
+
+    # Define the time vector
+    # Time point 0 - 15
+    # 1000 sub-divisions of time
+    t = sc.linspace(0, 15, 1000) # (values are arbitrary)
+
+    # Define carrying capacity of the resource (R)
+    K = 50
+
+    # Set initial conditions for both populations
+    # 10 resources and 5 consumers per unit area
+    R0 = 10
+    C0 = 5
+    RC0 = sc.array([[R0, C0]]) # Convert to an array of lists
+
+    for i in range(1000):
+        pops = Rt1_Ct1(RC0[-1][0], RC0[-1][-1]) # Run the function
+        RC0 = sc.vstack((RC0, pops)) # Vertically stack array
+        if pops[0] < 0: # When the resource is less than 0
+            RC0[-1, 0] = 0 # Resource population is extinct
+            print("Prey population reached extinction at {} iterations".format(i))
+            continue
+        if pops[-1] < 0: # As above
+            RC0[-1][-1] = 0
+            print("Predator population reached extinction at {} iterations".format(i))
+            break
+
+    # Set the time vector to equal the length of RC0
+    t = range(len(RC0))
+
+    ###############################
+    ## Visualize with matplotlib ##
+    ###############################
+
+    import matplotlib.pylab as p
+
+    # First plot
+    # Open empty figure object
+    f1 = p.figure()
+
+    # Plot
+    p.plot(t, RC0[:,0], "g-", label = "Resource density")
+    p.plot(t, RC0[:,1], "b-", label = "Consumer density")
+    p.grid()
+    p.legend(loc = "best")
+    p.xlabel("Time")
+    p.ylabel("Population density")
+    p.title("Consumer-Resource population dynamics")
+
+    # Save pdf in results directory
+    f1.savefig("../Results/LV4_model.pdf")
+
+    # Second plot
+    # Plot direction fields and trajectories in the phase plane
+
+    # Open empty figure object
+    f2 = p.figure()
+
+    # Plot
+    p.plot(RC0[:,0],RC0[:,1],"r-")
+    p.grid()
+    p.legend(loc = "best")
+    p.xlabel("Resource density")
+    p.ylabel("Consumer density")
+    p.title("Consumer-Resource population dynamics")
+
+    #save pdf in results directory
+    f2.savefig("../Results/LV4_phase.pdf")
+
+if __name__== "__main__":
+    import sys
+    main(sys.argv)
+**********************************************************************
+
+Testing LV4.py...
+
+LV4.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Error with values given, using default values instead!
+Calculating Lokta-Volterra model
+Predator population reached extinction at 0 iterations
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.90973s
+
+======================================================================
+Inspecting script file fmr.R...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env Rscript
+
+# Plots log(field metabolic rate) against log(body mass) for the Nagy et al 
+# 1999 dataset to a file fmr.pdf.
+# Writes the list of species names to species.csv
+
+cat("Reading CSV\n")
+
+nagy <- read.csv('../Data/NagyEtAl1999.csv', stringsAsFactors = FALSE)
+
+cat("Creating graph\n")
+pdf('../Results/fmr_plot.pdf', 11, 8.5)
+col <- c(Aves='purple3', Mammalia='red3', Reptilia='green3')
+plot(log10(nagy$M.g), log10(nagy$FMR.kJ.day.1), pch=19, col=col[nagy$Class], 
+     xlab=~log[10](M), ylab=~log[10](FMR))
+for(class in unique(nagy$Class)){
+    model <- lm(log10(FMR.kJ.day.1) ~ log10(M.g), data=nagy[nagy$Class==class,])
+    abline(model, col=col[class])
+}
+dev.off()
+
+cat("Finished in R!\n")
+**********************************************************************
+
+Testing fmr.R...
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Reading CSV
+Creating graph
+null device 
+          1 
+Finished in R!
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.13639s
+
+======================================================================
+Inspecting script file using_os.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+
+"""
+
+Using OS practical
+
+"""
+
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "Using os practical"
+__version__ = "0.0.1"
+__date__ = "November 2018"
+__license__ = "I do not have one"
+
+# Hint: look in subprocess.os and/or subprocess.os.path and/or
+# subprocess.os.walk for helpful functions
+
+#import modules
+import subprocess
+import re
+
+#################################
+# Get the user's home directory.
+home = subprocess.os.path.expanduser("~")
+
+# Use the subprocess.os module to get a list of files and  directories
+# in your ubuntu home directory
+
+# Use a for loop to walk through the home directory.
+allfiles = []
+for(dir, subdir, files) in subprocess.os.walk(home):
+    for i in subdir + files:
+        allfiles += re.findall(r"\w*", i)
+print("Number of directories and files in home directory:")
+print(len(allfiles))
+allfiles
+
+# Get files and directories in your home/ that start with an
+# upper case 'C'
+Cfiles = []
+for(dir, subdir, files) in subprocess.os.walk(home):
+    for i in subdir + files:
+        Cfiles += re.findall(r"^C\w*", i)
+print("Number of directories and files in home directory starting with C:")
+print(len(Cfiles))
+Cfiles
+
+#################################
+# Get files and directories in your home/ that start with either an
+# upper or lower case 'C'
+
+Ccfiles = []
+for(dir, subdir, files) in subprocess.os.walk(home):
+    for i in subdir + files:
+        Ccfiles += re.findall(r"^[Cc]\w*", i)
+print("Number of directories and files in home directory starting with C or c:")
+print(len(Ccfiles))
+Ccfiles
+
+#################################
+# Get only directories in your home/ that start with either an upper or
+#~lower case 'C'
+
+GetCDirfiles = []
+for(dir, subdir, files) in subprocess.os.walk(home):
+    for i in subdir:
+        GetCDirfiles += re.findall(r"^[Cc]\w*", i)
+print("Number of directories in home directory starting with C or c:")
+print(len(GetCDirfiles))
+GetCDirfiles
+**********************************************************************
+
+Testing using_os.py...
+
+using_os.py is a Python script file;
+ checking for docstrings...
+
+Found no doctrings!
+1 pt deducted
+
+Current Points = 95
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Number of directories and files in home directory:
+3208839
+Number of directories and files in home directory starting with C:
+14002
+Number of directories and files in home directory starting with C or c:
+29916
+Number of directories in home directory starting with C or c:
+3848
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 7.61417s
+
+======================================================================
+Inspecting script file LV1.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+def main(argv=[]):
+
+    """
+
+    A python script to exemplify using numerical integration
+    to solve the Lokta-Volterra model for a predator-prey
+    system in two-dimmensional space.
+
+    """
+
+    __author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+    __appname__ = "Lokta - Volterra 1"
+    __version__ = "0.0.1"
+    __date__ = "November 2018"
+    __license__ = "I do not have one"
+
+    # Import packages
+    import scipy as sc
+    import scipy.integrate as integrate
+
+    # Define function to return growth rate of consumer
+    # and resource population at any given time steps.
+
+    def dCR_dt(pops, t = 0):
+        """ A function that returns growth rate
+        of consumer and resource population  at
+        any given time step."""
+
+        R = pops[0] # Assign prey first column (list)
+        C = pops[1] # Assign predator to second column (list)
+        dRdt = r * R - a * R * C
+        dCdt = -z * C + e * a * R * C
+
+        return sc.array([dRdt, dCdt])
+
+    # Check type of object
+    type(dCR_dt)
+
+    # Assign parameter values
+    # Arbitrary but interesting!
+    r = 1. # Instrinsic growth rate
+    a = 0.1 # Intrinsic search rate for the resource
+    z = 1.5 # Mortality rate (time-1)
+    e = 0.75 # Consumer efficiency of converting resource to biomass
+
+    # Define time vector
+    # Time point 0 to 15
+    # 1000 sub-divisions of time
+    t = sc.linspace(0, 15, 1000) # (values are arbitrary)
+
+    # Set initial conditions for both populations
+    # 10 resources and 5 consumers per unit area
+    R0 = 10
+    C0 = 5
+    RC0 = sc.array([R0, C0]) # Convert to array
+
+    # Numerically integrate this system from starting conditions
+    pops, infodict = integrate.odeint(dCR_dt, RC0, t,
+    full_output = True)
+
+    # View array
+    # Contains population trajectories
+    pops
+
+    # Check type of infodict
+    type(infodict)
+
+    infodict.keys()
+
+    infodict["message"]
+
+    ###############################
+    ## visualize with matplotlib ##
+    ###############################
+
+    import matplotlib.pylab as p
+
+    # First plot
+    # Open empty figure object
+    f1 = p.figure()
+
+    # Plot
+    p.plot(t, pops[:,0], "g-", label = "Resource density")
+    p.plot(t, pops[:,1], "b-", label = "Consumer density")
+    p.grid()
+    p.legend(loc = "best")
+    p.xlabel("Time")
+    p.ylabel("Population density")
+    p.title("Consumer-Resource population dynamics")
+
+    # Save to pdf in results directory
+    f1.savefig("../Results/LV1_model.pdf")
+
+    # Second plot
+    # Plot direction fields and trajectories in phase plane
+    # Open empty figure object
+    f2 = p.figure()
+
+    # Plot
+    p.plot(pops[:,0],pops[:,1],"r-")
+    p.grid()
+    p.legend(loc = "best")
+    p.xlabel("Resource density")
+    p.ylabel("Consumer density")
+    p.title("Consumer-Resource population dynamics")
+
+    # Save to pdf in results directory
+    f2.savefig("../Results/LV1_phase.pdf")
+
+if __name__== "__main__":
+    import sys
+    main(sys.argv)
+**********************************************************************
+
+Testing LV1.py...
+
+LV1.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.79188s
+
+======================================================================
+Inspecting script file DrawFW.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+
+"""
+
+Food web networks with networkx
+
+"""
+
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "Food webs"
+__version__ = "0.0.1"
+__license__ = "I do not have one"
+
+#import modules
+import networkx as nx
+import scipy as sc
+import matplotlib.pyplot as p
+
+#generate a "synthetic" food web
+
+def GenRdmAdjList(N = 2, C = 0.5):
+    """ Generates a random list of connectance
+    probibility between species pairs """
+    Ids = range(N) #generate a particular set
+    ALst = [] #empty list
+    for i in Ids:
+        if sc.random.uniform(0, 1, 1) < C:
+            Lnk = sc.random.choice(Ids, 2).tolist()
+            if Lnk[0] != Lnk[1]: #avoid self looping i.e. cannibalism
+                ALst.append(Lnk)
+    return ALst
+
+#note this uses uniform random distribution [0,1]
+#this generates connectance probablity between species pairs
+
+#assign number os species (MaxN) and connectance(C)
+MaxN = 30
+C = 0.75
+
+#generate adjacency list
+AdjL = sc.array(GenRdmAdjList(MaxN, C))
+AdjL
+#two columns correspond to consumer and resource ids
+
+#generate node(species) data:
+Sps = sc.unique(AdjL)
+
+#generate body size for species using log10 scale
+SizRan = ([-10, 10])
+Sizs = sc.random.uniform(SizRan[0], SizRan[1], MaxN)
+Sizs
+
+f1 = p.figure()
+p.hist(Sizs) #log10 scale
+f1.savefig("../Results/FW_log.pdf")
+f2 = p.figure()
+p.hist(10 ** Sizs) #raw scale
+f2.savefig("../Results/FW_raw.pdf")
+
+#use a circular configuration
+pos = nx.circular_layout(Sps)
+
+#generate networkx graph object
+G = nx.Graph()
+
+#add nodes
+G.add_nodes_from(Sps)
+G.add_edges_from(tuple(AdjL)) #function requires tuple
+
+#generate node sizes proportional to log body sizes
+NodSizs = 1000 * (Sizs - min(Sizs)) / (max(Sizs) - min(Sizs))
+
+#render plot
+f3 = p.figure()
+nx.draw_networkx(G, pos, node_size = NodSizs)
+f3.savefig("../Results/FW_network.pdf")
+**********************************************************************
+
+Testing DrawFW.py...
+
+DrawFW.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Encountered error:
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:522: MatplotlibDeprecationWarning: The is_string_like function was deprecated in version 2.1.
+  if not cb.is_string_like(edge_color) \
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:543: MatplotlibDeprecationWarning: The is_string_like function was deprecated in version 2.1.
+  if cb.is_string_like(edge_color) or len(edge_color) == 1:
+/usr/lib/python3/dist-packages/networkx/drawing/nx_pylab.py:724: MatplotlibDeprecationWarning: The is_string_like function was deprecated in version 2.1.
+  if not cb.is_string_like(label):
+
+======================================================================
+Inspecting script file runLV.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+"""
+
+Profiling Lokta-Volterra python scripts
+
+"""
+__author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+__appname__ = "runLV"
+__version__ = "0.0.1"
+__license__ = "I do not have one"
+
+# Import modules
+import cProfile
+import pstats
+from io import StringIO
+import LV1
+import LV2
+import LV3
+import LV4
+
+# Profile LV1
+pr = cProfile.Profile()
+
+pr.enable()
+LV1.main([])
+pr.disable()
+
+s = StringIO()
+ps = pstats.Stats(pr, stream=s)
+ps.print_stats(0).sort_stats("calls") # Sort by calls
+
+print("Profiling LV1.py:")
+print(s.getvalue())
+
+# Profile LV2
+pr = cProfile.Profile()
+
+pr.enable()
+LV2.main([])
+pr.disable()
+
+s = StringIO()
+ps = pstats.Stats(pr, stream=s)
+ps.print_stats(0).sort_stats("calls") # Sort by calls
+
+print("Profiling LV2.py:")
+print(s.getvalue())
+
+# Profile LV3
+pr = cProfile.Profile()
+
+pr.enable()
+LV3.main([])
+pr.disable()
+
+s = StringIO()
+ps = pstats.Stats(pr, stream=s)
+ps.print_stats(0).sort_stats("calls") # Sort by calls
+
+print("Profiling LV3.py:")
+print(s.getvalue())
+
+# Profile LV4
+pr = cProfile.Profile()
+
+pr.enable()
+LV4.main([])
+pr.disable()
+
+s = StringIO()
+ps = pstats.Stats(pr, stream=s)
+ps.print_stats(0).sort_stats("calls") # Sort by calls
+
+print("Profiling LV4.py:")
+print(s.getvalue())
+**********************************************************************
+
+Testing runLV.py...
+
+runLV.py is a Python script file;
+ checking for docstrings...
+
+Found no doctrings!
+1 pt deducted
+
+Current Points = 94
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Profiling LV1.py:
+         545216 function calls (534324 primitive calls) in 0.760 seconds
+
+
+Error with values given, providing default values instead!
+Calculating Lokta-Volterra model
+Profiling LV2.py:
+         209382 function calls (204937 primitive calls) in 0.296 seconds
+
+
+Error with values given, using default instead!
+Calculating Lokta-Volterra model
+Prey population reached extinction at 7 iterations
+Predator population reached extinction at 8 iterations
+Profiling LV3.py:
+         371792 fu
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 2.03606s
+
+======================================================================
+Inspecting script file run_fmr_R.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python
+
+"""
+
+A python script to run fmr.R
+using the subprocess module
+
+"""
+
+#import modules
+import subprocess
+
+#open and run Rscript
+subprocess.Popen("/usr/bin/env Rscript --verbose fmr.R > \
+../Results/fmr.Rout 2> ../Results/fmr_errFile.Rout",\
+ shell=True).wait()
+**********************************************************************
+
+Testing run_fmr_R.py...
+
+run_fmr_R.py is a Python script file;
+ checking for docstrings...
+
+Found no doctrings!
+1 pt deducted
+
+Current Points = 93
+
+Output (only first 500 characters): 
+
+**********************************************************************
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.16920s
+
+======================================================================
+Inspecting script file LV2.py...
+
+File contents are:
+**********************************************************************
+#!/usr/bin/env python3
+def main(argv=[]):
+
+    """
+
+    A Lokta-Volterra model which includes prey density
+    dependance and takes input values from the command
+    line.
+
+    Input: r = Intrinsic growth rate
+           a = Per-capita search rate
+           z = Mortality rate
+           e = Consumer efficiency
+
+    Command line example:
+    run LV2.py r a z e
+
+    Output: Figure of consumer-resource population dynamics
+    Saves output to Results
+
+    """
+
+    __author__ = "Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)"
+    __appname__ = "Lokta - Volterra 2"
+    __version__ = "0.0.1"
+    __date__ = "November 2018"
+    __license__ = "I do not have one"
+
+    # Import packages
+    import sys
+    import scipy as sc
+    import scipy.integrate as integrate
+
+    # Define function to return growth rate of consumer
+    # and resource population at any given time steps.
+    def dCR_dt(pops, t = 0):
+        """ A function that returns growth rate
+        of consumer and resource population at
+        any given time step, including prey density
+        dependance."""
+
+        R = pops[0] #assign R first column (list)
+        C = pops[1] #assign C to second column (list)
+        dRdt = r * R * (1 - (R/K)) - a * C * R
+        dCdt = -z * C + e * a * C * R
+
+        return sc.array([dRdt, dCdt])
+
+    # Check type of object
+    type(dCR_dt)
+
+    # Take system arugments
+    try:
+        r = float(argv[1])
+        a = float(argv[2])
+        z = float(argv[3])
+        e = float(argv[4])
+    except (ValueError, IndexError):
+        print("Error with values given, providing default values instead!")
+        r = 1.
+        a = 0.1
+        z = 1.5
+        e = 0.75
+        print("Calculating Lokta-Volterra model")
+
+    # Define time vector
+    # Time point 0 to 15
+    # 1000 sub-divisions of time
+    t = sc.linspace(0, 15, 1000) # (values are arbitrary)
+
+    # Define resource carrying capacity
+    K = 50
+
+    # Set initial conditions for both populations
+    # 10 resources and 5 consumers per unit area
+    R0 = 10
+    C0 = 5
+    RC0 = sc.array([R0, C0]) # Convert to array of lists
+
+    # Numerically integrate this system from starting conditions
+    pops, infodict = integrate.odeint(dCR_dt, RC0, t,
+    full_output = True)
+
+    # View array
+    # Contains population trajectories
+    pops
+
+    type(infodict)
+
+    infodict.keys()
+
+    infodict["message"]
+
+    ###############################
+    ## visualize with matplotlib ##
+    ###############################
+
+    import matplotlib.pylab as p
+
+    # First plot
+    # Open empty figure object
+    f1 = p.figure()
+
+    # Plot
+    p.plot(t, pops[:,0], "g-", label = "Resource density")
+    p.plot(t, pops[:,1], "b-", label = "Consumer density")
+    p.grid()
+    p.legend(loc = "best")
+    p.xlabel("Time")
+    p.ylabel("Population density")
+    p.title("Consumer-Resource population dynamics, r = {:.2}, a = {:.2}, z = {:.2}, e = {:.2}".format(r,a,z,e), fontsize  = 10)
+    # Save pdf in results directory
+    f1.savefig("../Results/LV2_model.pdf")
+
+    # Open empty figure object
+    f2 = p.figure()
+    p.plot(pops[:,0],pops[:,1],"r-")
+    p.grid()
+    p.legend(loc = "best")
+    p.xlabel("Resource density")
+    p.ylabel("Consumer density")
+    p.title("Consumer-Resource population dynamics")
+
+    # Save pdf in results directory
+    f2.savefig("../Results/LV2_phase.pdf")
+
+if __name__== "__main__":
+    import sys
+    main(sys.argv)
+**********************************************************************
+
+Testing LV2.py...
+
+LV2.py is a Python script file;
+ checking for docstrings...
+
+Found one or more doctrings!
+
+Output (only first 500 characters): 
+
+**********************************************************************
+Error with values given, providing default values instead!
+Calculating Lokta-Volterra model
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.82651s
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 3 errors
+
+======================================================================
 ======================================================================
 
 FINISHED WEEKLY ASSESSMENT
 
-Current Points for the Week = 100
+Current Points for the Week = 93
 
 NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!

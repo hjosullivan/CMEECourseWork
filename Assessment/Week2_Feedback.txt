@@ -9,13 +9,13 @@ Note that:
 
 ======================================================================
 ======================================================================
-Your Git repo size this week is about 1.94 MiB on disk 
+Your Git repo size this week is about 2.01 MiB on disk 
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week1, Assessment, Week2, .git, Week3
+Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week8, Week5, Week2, Week9, Week4, .git, Week3
 
-Found the following files in parent directory: README.txt, .gitignore
+Found the following files in parent directory: .gitignore, README.md
 
 Checking for key files in parent directory...
 
@@ -28,20 +28,99 @@ Printing contents of .gitignore:
 *.pyc
 .DS_Store
 .Rhistory
-/Week5/
+_pycache_
 **********************************************************************
 
-Found README in parent directory, named: README.txt
+Found README in parent directory, named: README.md
 
-Printing contents of README.txt:
+Printing contents of README.md:
 **********************************************************************
-My CMEE Coursework Repository
+# CMEE Coursework
+
+MRes Computational Methods in Ecology and Evolution
+
+## Contents
+
+### Week 1
+
+* Introduction to Unix and Linux
+    * Shell scripting
+    * Version control with Git
+    * Scientific documents with LaTex
+
+### Week 2
+
+* Biological computing in Python -1
+    * Variables, operators and data structures
+    * Input/output
+    * Writing programs
+    * Unit testing and debugging
+    * Functions, modules and code compartmentalization
+
+### Week 3
+
+* Biological computing in R
+    * Variables, operators and data structures
+    * Input/output
+    * Writing programs
+    * Unit testing and debugging
+    * Functions, modules and code compartmentalization
+    * Data wrangling
+    * Visualisation
+
+### Week 4
+
+* Statistics
+    * No coursework for this week
+
+### Week 5
+
+* GIS
+    * No coursework for this week
+
+### Week 6
+
+* Genomics
+    * No coursework for this week
+
+### Week 7
+
+* Biological computing in Python -2
+    * Numerical computing in Python
+    * Introduction to numpy and scipy
+    * Plotting in Python
+    * Networks
+    * Regular expressions
+    * Building workflows
+
+### Week 8
+
+* Mini-project hackathon
+    * No coursework for this week
+
+### Week 9
+
+* High Performance Computing
+    * Neutral theory simulations
+    * Fractals
+
+## Authors
+
+* **Hannah O'Sullivan**
+
+## License
+
+I don't have one
+
+## Acknowledgments
+
+* --
 **********************************************************************
 
 ======================================================================
 Looking for the weekly directories...
 
-Found 3 weekly directories: Week1, Week2, Week3
+Found 9 weekly directories: Week1, Week2, Week3, Week4, Week5, Week6, Week7, Week8, Week9
 
 The Week2 directory will be assessed 
 
@@ -124,8 +203,7 @@ I don't have one
 * --
 **********************************************************************
 
-Found following files in results directory: JustOaksData.csv, bodymass.csv, testout.txt, align_seqs_fasta.txt, align_seqs_pickle.p, align_seqs.txt, .gitignore, testp.p...
-ideally, Results directory should be empty other than, perhaps, a readme. 
+Found following files in results directory: .gitignore...
 
 Found 21 code files: lc2.py, boilerplate.py, basic_csv.py, cfexercises2.py, align_seqs_better.py, dictionary.py, debugme.py, scope.py, cfexercises1.py, tuple.py, basic_io.py, lc1.py, oaks_debugme.py, oaks.py, loops.py, using_name.py, align_seqs.py, sysargv.py, align_seqs_fasta.py, control_flow.py, test_control_flow.py
 
@@ -224,7 +302,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.04216s
+Time consumed = 0.03855s
 
 ======================================================================
 Inspecting script file boilerplate.py...
@@ -274,7 +352,7 @@ This is a boilerplate
 
 Code ran without errors
 
-Time consumed = 0.04045s
+Time consumed = 0.03100s
 
 ======================================================================
 Inspecting script file basic_csv.py...
@@ -351,7 +429,7 @@ The species is Avahi_laniger
 
 Code ran without errors
 
-Time consumed = 0.03612s
+Time consumed = 0.03051s
 
 ======================================================================
 Inspecting script file cfexercises2.py...
@@ -470,7 +548,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.03735s
+Time consumed = 0.03614s
 
 ======================================================================
 Inspecting script file align_seqs_better.py...
@@ -617,7 +695,7 @@ There were 1 alignments with this score
 
 Code ran without errors
 
-Time consumed = 3.71106s
+Time consumed = 3.84612s
 
 ======================================================================
 Inspecting script file dictionary.py...
@@ -692,13 +770,13 @@ Current Points = 97
 Output (only first 500 characters): 
 
 **********************************************************************
-{'Afrosoricida': {'Microgale talazaci', 'Microgale dobsoni'}, 'Carnivora': {'Lyacon pictus', 'Arctocephalus gazella', 'Canis lupus'}, 'Chiroptera': {'Myotis lucifugus'}, 'Rodentia': {'Mus domesticus', 'Peromyscus crinitus', 'Gerbillus henleyi', 'Cleithrionomys rutilus'}}
+{'Chiroptera': {'Myotis lucifugus'}, 'Afrosoricida': {'Microgale talazaci', 'Microgale dobsoni'}, 'Carnivora': {'Canis lupus', 'Arctocephalus gazella', 'Lyacon pictus'}, 'Rodentia': {'Peromyscus crinitus', 'Gerbillus henleyi', 'Cleithrionomys rutilus', 'Mus domesticus'}}
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.02786s
+Time consumed = 0.02912s
 
 ======================================================================
 Inspecting script file debugme.py...
@@ -945,7 +1023,7 @@ hello
 
 Code ran without errors
 
-Time consumed = 0.03158s
+Time consumed = 0.02789s
 
 ======================================================================
 Inspecting script file tuple.py...
@@ -1012,7 +1090,7 @@ Tachycineata bicolor Tree swallow 20.2
 
 Code ran without errors
 
-Time consumed = 0.03491s
+Time consumed = 0.02706s
 
 ======================================================================
 Inspecting script file basic_io.py...
@@ -1128,7 +1206,7 @@ Fourth line
 
 Code ran without errors
 
-Time consumed = 0.03765s
+Time consumed = 0.03163s
 
 ======================================================================
 Inspecting script file lc1.py...
@@ -1216,15 +1294,15 @@ Output (only first 500 characters):
 ['Passerculus sandwichensis', 'Delichon urbica', 'Junco phaeonotus', 'Junco hyemalis', 'Tachycineata bicolor']
 ['Savannah sparrow', 'House martin', 'Yellow-eyed junco', 'Dark-eyed junco', 'Tree swallow']
 [18.7, 19, 19.5, 19.6, 20.2]
-{'Junco phaeonotus', 'Delichon urbica', 'Passerculus sandwichensis', 'Junco hyemalis', 'Tachycineata bicolor'}
-{'Tree swallow', 'Yellow-eyed junco', 'Savannah sparrow', 'House martin', 'Dark-eyed junco'}
+{'Delichon urbica', 'Passerculus sandwichensis', 'Junco phaeonotus', 'Junco hyemalis', 'Tachycineata bicolor'}
+{'Tree swallow', 'Dark-eyed junco', 'House martin', 'Yellow-eyed junco', 'Savannah sparrow'}
 {19.5, 19.6, 18.7, 19, 20.2}
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.03094s
+Time consumed = 0.02611s
 
 ======================================================================
 Inspecting script file oaks_debugme.py...
@@ -1321,7 +1399,7 @@ Quercus petraea
 
 Code ran without errors
 
-Time consumed = 0.07748s
+Time consumed = 0.06819s
 
 ======================================================================
 Inspecting script file oaks.py...
@@ -1395,14 +1473,14 @@ Output (only first 500 characters):
 **********************************************************************
 {'Quercus cerris', 'Quercus petraea', 'Quercus robur'}
 {'Quercus cerris', 'Quercus petraea', 'Quercus robur'}
-{'QUERCUS ROBUR', 'QUERCUS CERRIS', 'QUERCUS PETRAEA'}
-{'QUERCUS ROBUR', 'QUERCUS CERRIS', 'QUERCUS PETRAEA'}
+{'QUERCUS CERRIS', 'QUERCUS PETRAEA', 'QUERCUS ROBUR'}
+{'QUERCUS CERRIS', 'QUERCUS PETRAEA', 'QUERCUS ROBUR'}
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 0.03065s
+Time consumed = 0.02530s
 
 ======================================================================
 Inspecting script file loops.py...
@@ -1493,7 +1571,7 @@ GERONIMO! infinite loop! ctrl+c to s
 
 Code ran without errors
 
-Time consumed = 10.30723s
+Time consumed = 10.26234s
 
 ======================================================================
 Inspecting script file using_name.py...
@@ -1539,7 +1617,7 @@ This program is being run by itself
 
 Code ran without errors
 
-Time consumed = 0.10843s
+Time consumed = 0.07063s
 
 ======================================================================
 Inspecting script file align_seqs.py...
@@ -1708,7 +1786,7 @@ ATCGCCGGATTACGGG
 
 Code ran without errors
 
-Time consumed = 0.08741s
+Time consumed = 0.05293s
 
 ======================================================================
 Inspecting script file sysargv.py...
@@ -1756,7 +1834,7 @@ The argumnts are: ['sysargv.py']
 
 Code ran without errors
 
-Time consumed = 0.04625s
+Time consumed = 0.02558s
 
 ======================================================================
 Inspecting script file align_seqs_fasta.py...
@@ -1895,7 +1973,7 @@ No arguments provided, using default.
 
 Code ran without errors
 
-Time consumed = 3.96829s
+Time consumed = 3.69880s
 
 ======================================================================
 Inspecting script file control_flow.py...
@@ -2014,7 +2092,7 @@ True
 
 Code ran without errors
 
-Time consumed = 0.04603s
+Time consumed = 0.05119s
 
 ======================================================================
 Inspecting script file test_control_flow.py...
@@ -2104,7 +2182,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.07880s
+Time consumed = 0.07326s
 
 ======================================================================
 ======================================================================
