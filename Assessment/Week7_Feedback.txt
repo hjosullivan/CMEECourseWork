@@ -239,7 +239,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.10325s
+Time consumed = 0.10584s
 
 ======================================================================
 Inspecting script file regexs.py...
@@ -516,7 +516,7 @@ Predator population reached extinction at 8 iterations
 
 Code ran without errors
 
-Time consumed = 0.83778s
+Time consumed = 0.90068s
 
 ======================================================================
 Inspecting script file profileme2.py...
@@ -577,7 +577,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 3.66258s
+Time consumed = 3.64046s
 
 ======================================================================
 Inspecting script file timeitme.py...
@@ -653,7 +653,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 10.00239s
+Time consumed = 10.00674s
 
 ======================================================================
 Inspecting script file blackbirds.py...
@@ -741,7 +741,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.06210s
+Time consumed = 0.06525s
 
 ======================================================================
 Inspecting script file profileme.py...
@@ -803,7 +803,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 6.47742s
+Time consumed = 6.50760s
 
 ======================================================================
 Inspecting script file LV4.py...
@@ -956,7 +956,7 @@ Predator population reached extinction at 0 iterations
 
 Code ran without errors
 
-Time consumed = 0.90973s
+Time consumed = 0.86799s
 
 ======================================================================
 Inspecting script file fmr.R...
@@ -1002,7 +1002,7 @@ Finished in R!
 
 Code ran without errors
 
-Time consumed = 0.13639s
+Time consumed = 0.14059s
 
 ======================================================================
 Inspecting script file using_os.py...
@@ -1095,19 +1095,19 @@ Output (only first 500 characters):
 
 **********************************************************************
 Number of directories and files in home directory:
-3208839
+3241089
 Number of directories and files in home directory starting with C:
-14002
+14139
 Number of directories and files in home directory starting with C or c:
-29916
+30601
 Number of directories in home directory starting with C or c:
-3848
+3865
 
 **********************************************************************
 
 Code ran without errors
 
-Time consumed = 7.61417s
+Time consumed = 8.01074s
 
 ======================================================================
 Inspecting script file LV1.py...
@@ -1244,7 +1244,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.79188s
+Time consumed = 0.80883s
 
 ======================================================================
 Inspecting script file DrawFW.py...
@@ -1446,13 +1446,13 @@ Output (only first 500 characters):
 
 **********************************************************************
 Profiling LV1.py:
-         545216 function calls (534324 primitive calls) in 0.760 seconds
+         545242 function calls (534350 primitive calls) in 0.823 seconds
 
 
 Error with values given, providing default values instead!
 Calculating Lokta-Volterra model
 Profiling LV2.py:
-         209382 function calls (204937 primitive calls) in 0.296 seconds
+         209382 function calls (204937 primitive calls) in 0.376 seconds
 
 
 Error with values given, using default instead!
@@ -1465,7 +1465,7 @@ Profiling LV3.py:
 
 Code ran without errors
 
-Time consumed = 2.03606s
+Time consumed = 2.66445s
 
 ======================================================================
 Inspecting script file run_fmr_R.py...
@@ -1508,7 +1508,7 @@ Output (only first 500 characters):
 
 Code ran without errors
 
-Time consumed = 0.16920s
+Time consumed = 0.33227s
 
 ======================================================================
 Inspecting script file LV2.py...
@@ -1663,7 +1663,7 @@ Calculating Lokta-Volterra model
 
 Code ran without errors
 
-Time consumed = 0.82651s
+Time consumed = 1.50022s
 
 ======================================================================
 ======================================================================
