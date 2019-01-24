@@ -1,4 +1,4 @@
-Starting weekly assessment for Hannah Julia, Week1
+Starting weekly assessment for Hannah, Week1
 
 Current Points = 100
 
@@ -9,13 +9,13 @@ Note that:
 
 ======================================================================
 ======================================================================
-Your Git repo size this week is about 1.46 MiB on disk 
+Your Git repo size this week is about 2.01 MiB on disk 
 
 PART 1: Checking project workflow...
 
-Found the following directories in parent directory: Week1, Assessment, Week2, .git
+Found the following directories in parent directory: Week6, Week1, Week7, Assessment, Week8, Week5, Week2, Week9, Week4, .git, Week3
 
-Found the following files in parent directory: README.txt, .gitignore
+Found the following files in parent directory: .gitignore, README.md
 
 Checking for key files in parent directory...
 
@@ -25,23 +25,102 @@ Printing contents of .gitignore:
 **********************************************************************
 *~
 *.tmp
-*.pdf
 *.pyc
 .DS_Store
 .Rhistory
+_pycache_
 **********************************************************************
 
-Found README in parent directory, named: README.txt
+Found README in parent directory, named: README.md
 
-Printing contents of README.txt:
+Printing contents of README.md:
 **********************************************************************
-My CMEE Coursework Repository
+# CMEE Coursework
+
+MRes Computational Methods in Ecology and Evolution
+
+## Contents
+
+### Week 1
+
+* Introduction to Unix and Linux
+    * Shell scripting
+    * Version control with Git
+    * Scientific documents with LaTex
+
+### Week 2
+
+* Biological computing in Python -1
+    * Variables, operators and data structures
+    * Input/output
+    * Writing programs
+    * Unit testing and debugging
+    * Functions, modules and code compartmentalization
+
+### Week 3
+
+* Biological computing in R
+    * Variables, operators and data structures
+    * Input/output
+    * Writing programs
+    * Unit testing and debugging
+    * Functions, modules and code compartmentalization
+    * Data wrangling
+    * Visualisation
+
+### Week 4
+
+* Statistics
+    * No coursework for this week
+
+### Week 5
+
+* GIS
+    * No coursework for this week
+
+### Week 6
+
+* Genomics
+    * No coursework for this week
+
+### Week 7
+
+* Biological computing in Python -2
+    * Numerical computing in Python
+    * Introduction to numpy and scipy
+    * Plotting in Python
+    * Networks
+    * Regular expressions
+    * Building workflows
+
+### Week 8
+
+* Mini-project hackathon
+    * No coursework for this week
+
+### Week 9
+
+* High Performance Computing
+    * Neutral theory simulations
+    * Fractals
+
+## Authors
+
+* **Hannah O'Sullivan**
+
+## License
+
+I don't have one
+
+## Acknowledgments
+
+* --
 **********************************************************************
 
 ======================================================================
 Looking for the weekly directories...
 
-Found 2 weekly directories: Week1, Week2
+Found 9 weekly directories: Week1, Week2, Week3, Week4, Week5, Week6, Week7, Week8, Week9
 
 The Week1 directory will be assessed 
 
@@ -112,6 +191,7 @@ I don't have one
 **********************************************************************
 
 Found following files in results directory: .gitignore...
+
 Found 12 code files: CompileLatex.sh, ConcateTwoFiles.sh, CountLines.sh, variables.sh, tiff2png.sh, csvtospace.sh, UnixPrac.txt, FirstExample.tex, MyExampleScript.sh, FirstBiblio.bib, tabtocsv.sh, boilerplate.sh
 
 ======================================================================
@@ -508,7 +588,7 @@ Hello mhasoba
 
 Code ran without errors
 
-Time consumed = 0.00721s
+Time consumed = 0.00346s
 
 ======================================================================
 Inspecting script file FirstBiblio.bib...
@@ -565,7 +645,7 @@ Done!
 
 Code ran without errors
 
-Time consumed = 0.00527s
+Time consumed = 0.00337s
 
 ======================================================================
 Inspecting script file boilerplate.sh...
@@ -602,7 +682,7 @@ This is a shell script!
 
 Code ran without errors
 
-Time consumed = 0.00743s
+Time consumed = 0.00342s
 
 ======================================================================
 ======================================================================
