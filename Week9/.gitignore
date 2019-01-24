@@ -7,3 +7,5 @@ _pycache_
 *.RDA
 *.tgz
 hjo17.R
+CompileLatex.sh
+HPC_exercises.tex
