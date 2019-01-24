@@ -4,3 +4,6 @@
 .DS_Store
 .Rhistory
 _pycache_
+*.RDA
+*.tgz
+*.pdf
