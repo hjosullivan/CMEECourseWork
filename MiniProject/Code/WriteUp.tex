@@ -1,0 +1,225 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Computing Mini-Project Write up %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Author: Hannah O'Sullivan (h.osullivan18@imperial.ac.uk)
+% Script: WriteUp.tex
+% Date: Feb 2019
+% Desc: Mini project write up!!!
+
+\documentclass[11pt]{article}
+\usepackage[english]{babel}
+\usepackage[euler]{textgreek}
+\usepackage[utf8x]{inputenc}
+%\usepackage{lineno} % add line numbers
+\usepackage{mathtools}
+\usepackage{graphicx}
+%\graphicspath{{../Data/ }}
+\usepackage{float} % to position figures
+%\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[section]{placeins}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{geometry}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % to get lines
+\usepackage{natbib} % flexible citations
+\bibliographystyle{plainnat} % plain bibliography
+\usepackage{lineno}
+
+%% Add geometry
+\geometry{
+	paper=a4paper,
+	inner=2cm, % Inner margin
+	outer=2cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=2cm, % Top margin
+	bottom=2cm, % Bottom margin
+}
+
+\everymath{\displaystyle}
+\begin{document} % Begin document
+\linenumbers
+\date{} % Gets rid of the date randomly appearing
+\begin{titlepage} % Set up title page
+\begin{center} % Centre text
+%\linenumbers
+
+\vspace*{.06\textheight}
+{\scshape\LARGE Imperial College London\par}\vspace{1.5cm} % University name
+\textsc{\Large Computing Mini Project}\\[0.5cm] % Document type
+
+\HRule \\[0.4cm] % Horizontal line
+{\huge \bfseries Model comparison of three variations of the Sharpe-Schoolfield model \par}\vspace{0.4cm} % Thesis title
+\HRule \\[8cm] % Horizontal line
+
+\begin{minipage}[t]{0.4\textwidth}
+\begin{center} \large
+\emph{Word count:} \\
+\supervisor{2459}
+\end{center}
+\end{minipage}\\[3cm]
+
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:} \\
+%\author{Hannah O'Sullivan}
+\supervisor{Hannah O'Sullivan} % will not accept author!!!
+\href{mailto:h.osullivan@imperial.ac.uk}{h.osullivan@imperial.ac.uk}
+\end{flushleft}
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushright} \large
+\emph{Supervisor:} \\
+\supervisor{Dr. Samraat Pawar}
+\href{mailto:s.pawar@imperial.ac.uk}{s.pawar@imperial.ac.uk}
+\end{flushright}
+\end{minipage}\\[3cm]
+
+\vfill
+
+{\large \today}\\[4cm] % Date
+
+
+\vfill
+\end{center}
+\end{titlepage}
+
+%%%%%%%%%%%%%%
+%% ABSTRACT %%
+%%%%%%%%%%%%%%
+
+\section*{Abstract}
+Metabolism the the most fundamental biological rate. As such, measures of metabolic rate can be used to understand how the underlying biological principles respond to temperature change. The accuracy of the analytical tools we use to gain an understanding of mechanisms in metabolic ecology are paramount to investigating ecological processes. Here, I compare three variations of the Sharpe-Schoolfield model, a model often used to predict ecological dynamics such as species range shifts and evolutionary adaptations to climate change. The low temperature corrected version of the model provided the best fit to thermal performance curves. This study highlights the need to better understand thermal performance at low temperatures and evaluate potential sampling bias in the thermal perforance datasets currently available.
+
+
+%%%%%%%%%%%%%%%%%%
+%% INTRODUCTION %%
+%%%%%%%%%%%%%%%%%%
+
+\section*{Introduction}
+
+Temperature is fundamental in determining biological rates at all levels of organisation, from bio-chemical reactions to the biosphere. In the face of global climate change, it is essential to understand thermal performance in order to predict the impacts of temperature on ecological and evolutionary dynamics, \cite{Brown2004}. Numerous intraspecific studies over the past century have investigated the thermal performance of metabolic traits. As such, the empirical data describing thermal perforamce curves (TPCs), can be used to further our understanding of the underlying mechanisms which determine the temperature dependance of metabolic traits, \cite{Dell2013}. TPCs have been used to validate biogeographic theories, forecast extinction risks and model chemical fluxes, \cite{Beaugrand2014, Massot2010, cox2000acceleration}. These, and many more biological questions rely on our ability to accurately model temperature responses of metabolic traits. There has been growing scepticism in the ability of mechanistic models to estimate cardinal temperatures and the biological rates at these temperatures. In the context of biogeography, some equations have lead to rate estimates which translate to vast shifts in species ranges, \cite{Low-Decarie2017a}. Thus, it is imperative to explore the suitability of fitting particular mechanistic models to TPCs. Model selection is a dynamic process which requires continuous assessment in the light of competing hypotheses and increasing data availability,  \cite{Levins1966, Johnson2004}.\\
+
+\noindent
+\\Although different equations may lead to varied assumptions about the mechanisms underlying thermal performance, there are also a number of trait specific factors that need to be considered during model selection. For example, different traits may have different activation energies, partially explained by predator-prey dynamics, although this difference is also reliant on model choice and data quality, \cite{Dell2011}. Furthermore, activations energies may differ between taxa but again, it is unclear to what extent model selection and data quality influnce this difference, \cite{Chen2017}. Temperature range and resolution must also be taken into account when model fitting. In both experimental and field studies, logistic issues may result in too few temperatures recorded in too small a range. These caveats can have implications when predicting trait estimates, \cite{Knies2010}. The initial rise in trait performance is well explained and understood, however the mechanisms behind the decline in trait performance at higher temperatures is ambiguous. Few studies and theories have thoroughly examinied this decline and future studies are required with higher data quality. Protein degredation in one or more rate limiting enzyme may result in the decline, however, denaturation tends to occur well above the maximum trait value temperature, \cite{Schipper2014}. Some ecological explainations have been proposed as the mechanism for the decline, namely the increase of gas soluability with temperature. In aquatic systems, this could result in carbon-dioxide limitations for photosynthesis or oxygen limitations for respiration, \cite{Portner2010}.\\
+
+\begin{figure}[H]
+      \includegraphics[width = 0.75\textwidth]{../Data/figure1.PDF}
+      \centering
+      \caption{A typical unimodal thermal performance curve. The curve exhibits the well described increase in performance up to a maximum temperature followed by a rapid decrease in performance.}
+\end{figure}\\
+
+\noindent
+TPCs are generally unimodal in the full temperature range, composed of a rise in rate performance with increasing temperatures, followed by a rapid decrease in perforance at higher temperatures. Many equations capture this relationship between rate and temperature with four key parameters: ${T_p_k}$, the temperature at which trait values are the highest, \textit{E}, the rate increase from low temperatures to ${T_p_k}$, ${E_h}$ the rates decrease at high temperatures after ${T_p_k}$, and finally ${B_0}$, rate performance at a pre-defined reference temperature. In this study I will compare the ability of three variations of the Sharpe-Schoolfield model to describe TPCs. The full Sharpe-Schoolfield model is a mechanistic model based on thermodynamics. It assumes that the effect of temperature on a particular trait is dictated by the thermal sensitivity of a single rate-limiting enzyme which is deactivated at high and low temperatures, \cite{R.MS1981}. I will also compare two simplified versions of this model in which either the high temperature and low temperature parameters are removed in order to correct for insufficient data.
+
+%%%%%%%%%%%%%
+%% METHODS %%
+%%%%%%%%%%%%%
+
+\section*{Methods}
+
+\textit{Published data}\\
+TPC data was taken from the biotraits database, the largest database of compiled metabolic triats\cite{Dell2013}. The database spans all levels organisation, with 220 traits for microbes, plants and animals in a number of different habitats. From this database, TPC datasets with positive trait values were selected. To avoid overfitting, selected datasets were required to have at least 8 discrete temperatures, 2 more than the number of parameters in the full Sharpe-Schoolfield equation. In addition to this, datasets had at least two observations above and below ${T_p_k}$. After data quality checks, 414 datasets were available for model fitting.\\
+
+\noindent
+\textit{Theoretical context}\\
+The Sharpe-Schoolfield model has been used extensively in evolution and ecology to model the impacts of temperature change at all levels of biological organization, \cite{Barmak2014, Barneche2016, Padfield2016}.\\
+
+\noindent
+\textit{Full Sharpe-Schoolfield model}
+\begin{equation}
+	B = \frac{B_0e^{\frac{-E}{k}}^{(\frac{1}{T} - \frac{1}{293.15})}}{1 + e^{\frac{E_l}{k}(\frac{1}{T_l} - \frac{1}{T})} + e^{\frac{E_h}{k}(\frac{1}{T_h} - \frac{1}{T})}}}
+\end{equation}}
+\\
+
+\noindent
+Here \textit{B}, is the trait value at a given temperature in degrees Kelvin, ${B_0}$ is the trait value at a reference temperatre (25\textdegree{}C) which gives trait performance at low tempeartures and controls the vertical offset of the curve. ${E_l}$ is the low-temperature deactivation energy(eV) and ${T_l}$ is the temperature where half of the enzymes are low-tempearture deactivated. ${E_h}$ is the high-temperature enzyme deactivation energy and ${T_h}$ is the temperature where half of the enzymes are high-temperature deactivated. \textit{E} is the activating energy (eV) controlling the rise of the curve up to ${T_p_k}$ and \textit{k} is the Boltzmann constant.\\
+
+\noindent
+\textit{Low-temperature corrected Sharpe-Schoolfield model}
+\begin{equation}
+	B = \frac{B_0e^{\frac{-E}{k}}^{(\frac{1}{T} - \frac{1}{293.15})}}{1 + e^{\frac{E_h}{k}(\frac{1}{T_h} - \frac{1}{T})}}}}
+\end{equation}}
+\\
+\noindent
+The low temperature corrected Sharpe-Schoolfield model is appropriate where low in-activation is either weak or undetectable. This model assumes that at low temperatures, a single-rate limiting enzyme remains fully active. \\
+
+\noindent
+\textit{High-temperature corrected Sharpe-Schoolfield model}
+\begin{equation}
+	B = \frac{B_0e^{\frac{-E}{k}}^{(\frac{1}{T} - \frac{1}{293.15})}}{1 + e^{\frac{E_l}{k}(\frac{1}{T_l} - \frac{1}{T})}}}}
+\end{equation}}
+\\
+\noindent
+The high temperature corrected Sharpe-Schoolfield model is the inverse of the low-tempearture version. In this particular model, a single-rate limiting enzyme is assumed to be fully active at high temperatures within the physiological temperature range.\\
+
+\noindent
+\textit{Starting parameters}\\
+In order for facilitate non-linear least-squares (NLLS) fitting for the three models, starting parameters were extracted from the empirical TPC datasets. ${B_0}$ was set to be the trait value closest to the reference temperature, \textit{Tref} = 25\textdegree{}C. \textit{E} was estimated from the slope of a linear model fitted on the portion of the curve up to ${T_p_k}$ on 1/KT temperature values and logged trait values, in cases where \textit{E} was not found, \textit{E} was set to the default value of 0.66 as reported through the metabolic theory of ecology (MTE) literature. ${E_h}$ was estimated in a similar fashion, fitting a linear model to the downward portion of the curve to get the slope and adding the value to \textit{E}. In cases were this was not possible ${E_h}$ was set to twice the value of \textit{E}. ${E_l}$ was estimated similarly to ${E_h}$ but on the upwards slope. When estimation through the fitted model was not possible ${E_l}$ was set to half the value of E. ${T_h}$ and ${T_l}$ were estimated as the temperature halfway between the temperatures closest to minimum and maximum trait values on either side of the curve. If this was not possible, ${T_h}$ was set to
+${T_p_k}$ + 1 and ${T_l}$ was set to ${T_p_k}$ - 10.\\
+
+\noindent
+\textit{NLLS fitting and model selection}\\
+After finding starting parameters from all datasets, NLLS fitting was performed using the Levenberg-Marquardt algorithm. This algorithm allows for robust fitting on non-linear equations despite potentially unreliable starting parameters. Before fitting, an array of residuals of the difference between excepted values and empirical values are computed. This array is then used to perform a minimization process which returns the optimized parameters and goodness-of-fit statistics. Aikaike information criterion (AIC), and all parameter estimates were extracted from the model results. In addition to this, ${R_2}$ and the residual sum of squares (RSS) were calcualted for each fitted model. ${R_2}$ was calulcated as 1 - the variance in the model residuals divided by the variance in the logged trait values. RSS was calculated from the sum of model residuals ${2_n}$. Equations were ranked on each dataset using the model AIC scores. The model AIC scores represent the information lost by fitting the candidate model to the TPC dataset. In order to select the model with the least information loss for each TPC, $\Delta$AIC was calculated as $\exp(({AIC_m_i_n} - {AIC_i})/2)$. Where $AIC_m_i_n$ is the model with the lowest AIC for that particular dataset and $AIC_i$ is a candidate model for comparison. This measure equates to the probability that the candidate model(\textit{i}) better minimizes the information loss for a given dataset\cite{Burnham2011}. Other statistical measures (BIC,${R_2}$) gave similar conclusions and thus were not included in this study.\\
+
+\noindent
+\textit{Computing languages}\\
+Data wrangling, initial cleaning and final plotting was performed in R version 3.5.1 (2018-07-02). R was chosen due to the efficiency of data manipulation and visulation introducted in the "tidyverse" and "ggthemes" packages. Following this, datasets were migrated to Python version 3.7.0 for calculation of starting parameters and NLLS model fitting. The python packages "scipy", "numpy" and "lmfit" provide robust model fitting of non-linear equations. Bash was used to contruct a workflow between R, Python and document compilation with latex.\\
+
+\section*{Results}
+For the three models, almost all TPCs acquired a successful fit. For the full and high-temperature correction Sharpe-Schoolfield models 100\% of models were fitted to TPC data. For the low-temperature correction model only 0.24\% of models did not coverge. It is likely that this high level of convergence is due to the prior dataset selection that optimised for unimodal datasets. In general the low-temperature correction version of the Sharpe-Schoolfield model performed the best out of the three models.
+
+\begin{figure}[H]
+      \includegraphics[width = 0.75\textwidth]{../Data/figure3.PDF}
+      \centering
+      \caption{Proportion of TPCs where either the full, low or high corrected Sharpe-Schoolfield model was the best fitting model.}
+\end{figure}
+
+\begin{figure}[H]
+      \includegraphics[width = 0.75\textwidth]{../Data/figure4.PDF}
+      \centering
+      \caption{Proportion of TPCs where either the full, low or high corrected Sharpe-Schoolfield model was the best fitting model for each kingdom. Notably, the full and low corrected models have almost equal performance for bacteria.}
+\end{figure}
+
+\begin{figure}[H]
+      \includegraphics[width = 0.75\textwidth]{../Data/figure5.PDF}
+      \centering
+      \caption{Proportion of TPCs where either the full, low or high corrected Sharpe-Schoolfield model was the best fitting model for each climate.}
+\end{figure}
+
+\begin{figure}[H]
+      \includegraphics[width = 0.75\textwidth]{../Data/figure7.PDF}
+      \centering
+      \caption{Proportion of TPCs where either the full, low or high corrected Sharpe-Schoolfield model was the best fitting model for each trait type.}
+\end{figure}
+
+%%%%%%%%%%%%%%%%
+%% DISCUSSION %%
+%%%%%%%%%%%%%%%%
+
+\section*{Discussion}\\
+\noindent
+Out of the three candidate models, the low temperature corrected verion of the Sharpe-Schoolfield model was best able to match the TPC datasets selected from the biotraits database. Indeed, the full Sharpe-Schoolfield model postulates that a given rate-limiting enzyme becomes deactivated at both high and low temperatures. However, it is logistically difficult to perform experiments which capture the necessary resolution (number of experimental observations) at low temperatures. As a result,low temperature deactivation is often difficult to detect,  \cite{Pawar2016}. Given the difficulty in detecting low temperature deactivation, the low temperature deactivation starting parameters ${E_l}$ and ${T_h}$ may have suffered from inaccuracies, in turn impacting the ability of candidate models using these parameters to fit well to TPC datasets. In this study the reference temperature, \textit{Tref} was set to 25\textdegree{}C which is a temperature choice considered appropriate for ectotherms. However, some studies have selected a lower \textit{Tref} in order to account for the experimental caveats in detecting low-temperature enzyme deactivation. For example, in  \cite{Sal2018}, \textit{Tref} was set to 0\textdegree{}C to extract reasonable ${B_0}$ estimates, even for cold adatped species with a low ${T_p_k}$.\\
+
+\noindent
+The range of temperatures and frequency at which these temperatures are recorded is another factor to consider during model selection. Notably, \cite{Low-Decarie2017a} found a linear increase in the error of cardinal temperature estimated with a decrease in temperature resolution. They also found that error increased linearly with a decrease in the measured range of trait values. It may be that the low temperature corrected Sharpe-Schoolfield model had lower data quality requirements and thus fitted the data more easily.\\
+
+\begin{figure}[H]
+      \includegraphics[width = 0.75\textwidth]{../Data/figure2.PDF}
+      \centering
+      \caption{Number of temperatures measured for each dataset across the entire biotraits database. Very few studies recorded more than 20 trait values per TPC.}
+\end{figure}\\
+
+\noindent
+Parameter estimate issues are unavoidable when working with such a diverse datbase which includes rates from microbes, plants and animals from numerous climates and habitats. The fact that almost all models converged on a given dataset from this vast selection is indeed impressive. Neverthless, the inherent ability of the Levenberg-Marquardt algorithm to fit data regardless of unreliable starting parameters might not be the best approach to finding mechanisms of thermal performance. The choice of mechanistic models over phenomenological models such a general cubic polynomial champion is due to their ability to provide some explanation of the underlying biology. If starting parameter estimates are allowed to vary wildly between their bounds this reduces the strength of the model predictions. Furthermore, model selection with AIC only provides the best model from a selection of models fitted to the same dataset. Careful consideration must be taken when evaluating the quality of model fitting in the context of biology. Although the low-temperature correction Sharpe-Schoolfield model better describes the data than other models, this does not necessarily mean that the assumptions of the model (that low-temperature enzymes are fully active) are true. Thus, the results of this study imply that more research is needed to develop the ability of mechanistic models to detect low temperature enzyme activity. Model selection is a dynamic and interdisciplinary process requiring expertise in mathematics and statistics but above all, models must be evaluated in the context of their biological meaning. 
+
+%%%%%%%%%%%%%%%%%%
+%% BIBLIOGRAPHY %%
+%%%%%%%%%%%%%%%%%%
+
+\pagebreak % new page for bibliography
+
+\bibliography{../Data/MiniProject.bib}
+\end{linenumbers}
+
+\end{document}
